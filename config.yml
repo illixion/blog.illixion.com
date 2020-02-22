@@ -64,7 +64,7 @@ menu:
 
 
 params:
-  since: 2020
+  since: "2020"
   dateFormatToUse: "2006-01-02"
   enablePostCopyright: true
   # the directory under content folder that you want to render
@@ -118,14 +118,14 @@ params:
       url: favicon.ico
     title: Manual
     favicon: favicon.ico
-    board: <p>This website has just been created, and thus, it shall remain forever under construction.</p><p>(or at least until end of March)</p> # 公告牌
+    board: <p>This website has just been created, please let me know if you have any issues <b><a href="https://github.com/manualmanul/catto.io/issues/new">here</a></b>.</p> # 公告牌
 
   # Share
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
   share:
     enable: true # 是否启用分享
-    sites: weibo,qq,wechat,facebook,twitter # PC端显示的分享图标
-    mobile_sites: weibo,qq,qzone # 移动端显示的分享图标
+    sites: twitter,facebook,weibo,qq,wechat # PC端显示的分享图标
+    mobile_sites: twitter,facebook,weibo,qq,qzone # 移动端显示的分享图标
 
   # Comment
   comment:
@@ -182,7 +182,7 @@ params:
 
   # config
   config:
-    skin: theme-grey # theme color default is white. other type [theme-black,theme-blue,theme-green,theme-purple]
+    skin: theme-purple # theme color default is white. other type [theme-black,theme-blue,theme-green,theme-purple]
     layout: main-center # main-left main-center main-right
     excerpt_link: Read More
     toc: true
