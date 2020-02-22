@@ -7462,22 +7462,20 @@ body.okayNav-loaded {
 }
 
 .theme-purple .header {
-  background: #494683;
+  background: #ef32d9;
   background: -webkit-linear-gradient(
     left,
-    #494683 0%,
-    #555299 80%,
-    #555299 100%
+    #ef32d9 0%,
+    #89fffd 100%
   );
   background: -webkit-gradient(
     linear,
     left top,
     right top,
-    from(#494683),
-    color-stop(80%, #555299),
-    to(#555299)
+    from(#ef32d9),
+    to(#89fffd)
   );
-  background: linear-gradient(to right, #494683 0%, #555299 80%, #555299 100%);
+  background: linear-gradient(to right, #ef32d9 0%, #89fffd 100%);
 }
 
 @media (min-width: 767px) {
@@ -9121,26 +9119,23 @@ body.okayNav-loaded {
   }
 
   .theme-purple #main-navbar {
-    background: #494683;
+    background: #ef32d9;
     background: -webkit-linear-gradient(
       left,
-      #494683 0%,
-      #555299 80%,
-      #555299 100%
+      #ef32d9 0%,
+      ##89fffd 100%
     );
     background: -webkit-gradient(
       linear,
       left top,
       right top,
-      from(#494683),
-      color-stop(80%, #555299),
-      to(#555299)
+      from(#ef32d9),
+      to(##89fffd)
     );
     background: linear-gradient(
       to right,
-      #494683 0%,
-      #555299 80%,
-      #555299 100%
+      #ef32d9 0%,
+      #89fffd 100%
     );
   }
 }
