@@ -25,6 +25,6 @@ Intel UHD 630 proved to be just as finicky at first, adding an annoying pink tin
 
 There really weren't all that many issues with this particular setup, which really says something about how far the Hackintosh community has progressed over the years. Most people likely won't even encounter any of these issues when using an officially-supported AMD GPU.
 
-In any case, here's my config.plist file: [Download *asus-h110m-i5-8500-igpu.plist*](/post_files/2019-10-18-asus_h110m_i5-8500_hackintosh/asus-h110m-i5-8500-igpu.plist).
+In any case, here's my config.plist file: [Download *asus-h110m-i5-8500-igpu.plist*](/post_files/asus-h110m-i5-8500-hackintosh/asus-h110m-i5-8500-igpu.plist).
 
 Have fun!
