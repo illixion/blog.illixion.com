@@ -9,7 +9,7 @@ categories = ["general"]
 
 So, here it is. Welcome to my personal World Wide Web internet page! Available right here on the information superhighway! Also, did you know that the internet is a series of tubes?
 
-![Isaac Asimov](/post_files/2019-09-01-First_one/1.jpg)
+![Isaac Asimov](/post_files/first-one/1.jpg)
 
 (I'm not that old, I swear)
 
