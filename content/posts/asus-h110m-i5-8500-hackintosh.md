@@ -1,11 +1,13 @@
-+++
-author = "Manual"
-title = "Hackintosh setup notes for ASUS H110M, Intel i5-8500 and UHD 630"
-date = "2019-10-18"
-summary = "Hackintosh build guide for a PC with ASUS H110M, Intel i5-8500 and UHD 630."
-tags = ["hackintosh"]
-categories = ["tutorials"]
-+++
+---
+author: Manual
+title: Hackintosh setup notes for ASUS H110M, Intel i5-8500 and UHD 630
+date: "2019-10-18"
+summary: Hackintosh build guide for a PC with ASUS H110M, Intel i5-8500 and UHD 630.
+tags:
+- hackintosh
+categories:
+- tutorials
+---
 
 I've completed a new PC build, and this time, I didn't have control over the components of the PC! Someone asked me if I could install MacOS Mojave on their little productivity machine, and I've agreed to the challenge.
 

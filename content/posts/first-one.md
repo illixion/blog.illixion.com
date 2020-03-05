@@ -1,17 +1,19 @@
-+++
-author = "Manual"
-title = "First one"
-date = "2019-09-01"
-summary = "Welcome to my personal World Wide Web internet page! Here's some information about me as of October 2019."
-tags = ["introduction"]
-categories = ["general"]
-+++
+---
+author: Manual
+title: First one
+date: "2019-09-01"
+summary: Welcome to my personal World Wide Web internet page! Here's some information about me as of October 2019.
+tags: 
+- introduction
+categories:
+- general
+---
 
 So, here it is. Welcome to my personal World Wide Web internet page! Available right here on the information superhighway! Also, did you know that the internet is a series of tubes?
 
-![Isaac Asimov](/post_files/first-one/1.jpg)
-
-(I'm not that old, I swear)
+| ![Isaac Asimov](/post_files/first-one/1.jpg) |
+|:--:|
+| *(I'm not that old, I swear)* |
 
 Anyway, I've heard that people usually put some kinda intros on their first blog pages, so let's try that. I'm ***REMOVED***, I'm a junior developer in his twenties and my hobbies include dabbling in infosec, making LEDs go blinky-blinky and screaming at computers until they start working.
 
