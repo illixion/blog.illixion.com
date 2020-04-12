@@ -1,6 +1,6 @@
 ---
 author: Manual
-title: How to watch 4K YouTube (and WebM) in macOS Safari with no extra pain
+title: How to watch 4K YouTube (and WebM) in macOS Safari without pain
 date: "2020-04-12"
 summary: It's well known that Safari doesn't support VP9 or WebM, but I've found a workaround that doesn't involve switching to Chrome. Read on!
 tags: 
