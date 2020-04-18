@@ -43,15 +43,15 @@ ANYWAY, here's how you can set up this workflow on your machine:
 
 1. Install *IINA* from the official website: [https://iina.io](https://iina.io)
 2. Install *Homebrew* if you don't have it already: [https://brew.sh](https://brew.sh)
-3. Install *ffmpeg* and *youtube-dl* from homebrew using the following Terminal.app command: `brew install ffmpeg youtube-dl`
+3. Install *youtube-dl* from homebrew using the following Terminal.app command: `brew install youtube-dl`
 
-Now that you've installed everything, you'll need to do some setup in order to make sure that you can actually open videos from Safari and in high quality:
+Now that you've installed everything, you'll need to do some setup in order to make sure that you can actually open videos from Safari and in high quality.
+
+## Configuration
 
 1. Open Safari preferences, go to Extensions and activate "Open in IINA" (at this point, you should see the toolbar icon appear, as well as extra right-click options)
 2. Open IINA and go through initial setup
 3. Open IINA preferences, go to the Network tab and check "Enable youtube-dl"
-
-## Configuration
 
 At this point, there are a few different options that you can specify in youtube-dl settings:
 
@@ -59,7 +59,7 @@ At this point, there are a few different options that you can specify in youtube
 
 *Note:* This could be different on your machine or change at some point in the future, so if you're unsure whether this is correct, execute `which youtube-dl` in Terminal.app and paste everything up to **/youtube-dl** into this field
 
-As for **Raw options**, you can set up some preferences for how you'd like IINA to seelct which video stream to play:
+As for **Raw options**, you can set up some preferences for how you'd like IINA to select which video stream to play:
 
 Up to **4K**, prefer 60 FPS (recommended): `format="bestvideo[fps>=50,ext=mp4,height<=?2160]+bestaudio/best[ext=m4a,height<=?2160]"`
 
@@ -67,6 +67,6 @@ Up to **1080p**, prefer 60 FPS: `format="bestvideo[fps>=50,ext=mp4,height<=?1080
 
 Highest quality available (usually **8K**): `format="bestvideo+bestaudio/best"`
 
-Once you've entered your raw options, press enter and quit IINA. Next time you launch IINA, it should play your video at whichever highest quality the video is available in.
+Once you've entered your raw options, press enter and quit IINA. Next time you launch IINA, it will be able to play 4K YouTube videos.
 
 Hope this was helpful!
