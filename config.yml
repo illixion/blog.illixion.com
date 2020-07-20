@@ -118,7 +118,7 @@ params:
       url: favicon.ico
     title: Manual
     favicon: favicon.ico
-    board: <p>This website has just been created, please let me know if you have any issues <b><a href="https://github.com/illixion/illixion.com/issues/new">here</a></b>.</p> # 公告牌
+    board: <p>Found a job! 🎉</p> # 公告牌
 
   # Share
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
