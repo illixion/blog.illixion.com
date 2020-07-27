@@ -118,7 +118,7 @@ params:
       url: favicon.ico
     title: Manual
     favicon: favicon.ico
-    board: <p>Found a job! 🎉</p> # 公告牌
+    board: <p>Please let me know if you have any issues with the website <b><a href="https://github.com/manualmanul/catto.io/issues/new">here</a></b>.</p> # 公告牌
 
   # Share
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
