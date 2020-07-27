@@ -10,13 +10,13 @@ categories:
 - general
 ---
 
-Telegram seems to limit who can see the new "Filter New Chats from Non-Contacts" setting to people who have already received a lot of spam. How availability is determined is unknown to me. Thankfully, this option is available through the Telegram Client API, so it's still possible to enable it before that happens.
+Telegram seems to limit who can see the new ["Filter New Chats from Non-Contacts"](https://telegram.org/blog/profile-videos-people-nearby-and-more#filter-new-chats-from-non-contacts) setting to people who have already received a lot of spam. How availability is determined is unknown to me. Thankfully, this option is available through the Telegram Client API, so it's still possible to enable it before that happens.
 
 This is a brief write-up and I won't go into the details of each step. You're expected to know how to use the command line of your preferred OS.
 
 1. Generate Telegram Application API keys as described here: [https://core.telegram.org/api/obtaining_api_id](https://core.telegram.org/api/obtaining_api_id)
 2. Install Python 3, Pip and Git
-3. Run the following shell commands:
+3. Run the following shell commands (Linux/Mac, Windows is slightly different):
 
 ```shell
 git clone https://github.com/LonamiWebs/Telethon.git
@@ -57,4 +57,4 @@ GlobalPrivacySettings(
 )
 ```
 
-Please comment below if this doesn't work for you so that I can update this article accordingly.
+Please comment below if this stops working so that I can update this article accordingly.
