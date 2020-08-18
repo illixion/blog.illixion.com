@@ -2,7 +2,7 @@
 author: Manual
 title: How to recover BitWarden data with only a PIN
 date: "2020-08-01"
-summary: You forgot your master password. It happens to the best of us. Don't worry about your passwords however, for there is a way to recover your passwords if you still remember your PIN
+summary: You forgot your master password. It happens to the best of us. Don't worry about your passwords however, for there is a way to recover them if you still remember your PIN
 tags: 
 - tipsandtricks
 - bitwarden
@@ -10,9 +10,9 @@ categories:
 - general
 ---
 
-It happens to the best of us. You're using a password manager like everybody is supposed to, but you've kept using PIN and biometric authentication for longer than you can remember. People tend to forget things that they don't use often, and so one day realize that you need to reinstall the BitWarden app and you don't remember the one password that had to remember. Drat!
+It happens to the best of us. You're using a password manager like everybody is supposed to, but you've kept using PIN and biometric authentication for longer than you can remember. People tend to forget things that they don't use often, and so one day realize that you need to reinstall the BitWarden app and you forgot the one password that had to remember. Drat!
 
-BitWarden forums will tell you that without a master password, your data is gone forever, and they would be only partially correct. BitWarden has no proper fail state for forgetting the master password, and so if you can't remember it, you can no longer use any of the "secure" functions in their software, which includes stuff like exporting data. What they don't tell you though is that the PIN code encrypts your vault master key which that is stored on your machine, and so it's possible to do most without knowing it.
+BitWarden forums will tell you that without a master password, your data is gone forever, and they will be only partially correct. BitWarden has no proper fail state for forgetting the master password, so if you can't remember it, you can no longer use any of the "secure" functions which includes stuff like exporting data. What they don't tell you though is that your PIN code encrypts your vault master key, which is stored on your machine, and so it's possible to do most things without knowing it.
 
 ## Brief overview of the BitWarden PIN encryption scheme
 
@@ -26,9 +26,9 @@ This private key is not very useful outside of the local storage paradigm as the
 
 ## Preface: how to open the developer tools
 
-Note that this only works on the Desktop app and the Browser extensions, as they're the only versions of the app where you can invoke the developer tools. AFAIK mobile apps have no debugging options, so there's not much that you can do with those.
+Note that this only works on the Desktop app and the Browser extensions, as they're the only versions of the app where you can invoke the developer tools. AFAIK mobile apps have no debugging options, so there's not much that you can do with thosebesides copying everything by hand.
 
-If you meet those conditions, here's what you need to do:
+Here's what you need to do:
 
 * Desktop: press **F12** on the appication screen once you're logged in
 * Browser: this highly depends on which browser you're using:
@@ -53,10 +53,10 @@ BitWarden's interface won't let you export data without the master password, but
 From the developer tools, open the console and execute one of the following commands:
 
 ```js
-// For a JSON export (better for reimporting)
+// JSON export (better for reimporting)
 bitwardenMain.exportService.getExport('json').then(data => console.log(data))
 
-// For a CSV export
+// CSV export
 bitwardenMain.exportService.getExport('csv').then(data => console.log(data))
 ```
 
@@ -64,10 +64,8 @@ Save the output to a new file and you've got your backup.
 
 ## But can I export the master password?
 
-From my brief look into the source code, it would appear that the master password is not stored anywhere, only the vault decryption key is. You'll have to remove your account and create it again as described here: <https://bitwarden.com/help/article/forgot-master-password/>
+From my brief look into the source code, it would appear that the master password is not stored anywhere, only the vault decryption key is. You'll have to delete your account and sign up again as described here: <https://bitwarden.com/help/article/forgot-master-password/>. You can also contact BitWarden support to transfer over your premium subscription as that's not done automatically.
 
 ## What can be done to avoid this in the future?
 
-Use password hints. Sure, they're less secure than having no password hint, but a useful password hint really can save you from all of this in the future. Another option would be writing down the master password and storing it somewhere same, or breaking it up into pieces and storing it in multiple different places.
-
-I hope this article was useful to you!
+Use password hints. Sure, they're less secure than having no password hint, but a useful password hint really can save you from all of this in the future. Another option would be writing down the master password and storing it somewhere safe, or breaking it up into pieces and storing it in multiple different places.
