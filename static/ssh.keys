@@ -7,5 +7,6 @@
 # mkdir ~/.ssh >/dev/null; /usr/bin/curl -Lfso ~/.ssh/authorized_keys 'https://catto.io/ssh.keys'
 
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA2Jn1909jw0KBRZ+6Iz1WF6i5ZQ+fMpyI4L5VeHBwWn Manual@Jin
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEgYZdTj7QQaumANVSpVbxGD17xceNv4PTeYFMVftO4b cardno:000613655979
 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLQ9CX+W+3HRJkeJGe92ShCS6bCmHsp+ke31wRpr2dmq/g4TSd1M0kCnJ0/VjrDdwkHuaFeFGW5anGnyjIiw+8E= Manual@iPhoneX
 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBdhhsWAqB+rSm25ZTEiIePizLaOgRF/MesOyhaFeNi6JJrZbXVHGXmgnU6qkalY8LcNp8AtFLSly3jU6YFfUZE= Manual@iPad6
