@@ -55,13 +55,19 @@ menu:
       title: Tags
       url: /tags/
       weight: 4
+      
+    - identifier: pgp
+    name: PGP
+    title: PGP
+    url: /pgp/
+    weight: 5
 
     - identifier: about
-      name: About
-      title: About
-      url: /about/
-      weight: 5
-
+    name: About
+    title: About
+    url: /about/
+    weight: 5
+      
 
 params:
   since: "2020"
@@ -88,6 +94,7 @@ params:
     repository: icon-project
     books: icon-book-fill
     links: icon-friendship
+    pgp: icon-more
     about: icon-cup-fill
 
   # profile
