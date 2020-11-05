@@ -13,7 +13,7 @@ It's well known that Safari doesn't support playing VP9 or WebM videos out of th
 
 For context, I use Safari almost exclusively due to its simplicity, features and integration with iOS devices. Unfortunately, due to Apple only supporting licensed video codecs like HEVC, Safari has 0 support for VP8/VP9. What this means is that YouTube on Safari will not play above 1080p no matter what, and WebM's won't play at all. However, you don't have to use YouTube's web player. Enter IINA:
 
-| ![IINA Logo](https://raw.githubusercontent.com/iina/iina/develop/iina/Assets.xcassets/AppIcon.appiconset/256-1.png) |
+| ![IINA Logo](https://raw.githubusercontent.com/iina/iina/develop/iina/Assets.xcassets/AppIcon.appiconset/iina-icon-256.png) |
 |:--:|
 | *IINA is the modern video player for macOS.* |
 

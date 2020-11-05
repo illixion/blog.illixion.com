@@ -26,7 +26,7 @@ This private key is not very useful outside of the local storage paradigm as the
 
 ## Preface: how to open the developer tools
 
-Note that this only works on the Desktop app and the Browser extensions, as they're the only versions of the app where you can invoke the developer tools. AFAIK mobile apps have no debugging options, so there's not much that you can do with thosebesides copying everything by hand.
+Note that this only works on the Desktop app and the Browser extensions, as they're the only versions of the app where you can invoke the developer tools. AFAIK mobile apps have no debugging options, so there's not much that you can do with those besides copying everything by hand.
 
 Here's what you need to do:
 
