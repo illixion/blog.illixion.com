@@ -4,7 +4,7 @@ description = "My PGP key"
 author = "Manual"
 +++
 
-[PGP is bad and you should stop using it.](https://latacora.micro.blog/2019/07/16/the-pgp-problem.html). age is a more modern and cryptographically sound way to encrypt messages and files, and I encourage you to use it instead.
+[PGP is bad and you should stop using it.](https://latacora.micro.blog/2019/07/16/the-pgp-problem.html) age is a more modern, simple and cryptographically sound way to encrypt messages and files, and I encourage you to use it instead.
 
 To encrypt a message with my key using age, use this command:
 

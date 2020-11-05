@@ -103,8 +103,8 @@ params:
     avatar: manual.png
     gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
     author: Manual
-    author_title: Software Developer
-    author_description: ***REMOVED*** ***REMOVED*** (Manual) is a software developer, currently working full-time on web-based technologies using JavaScript, TypeScript and server-side JS. I'm also interested by hardware, how it works and how it can be used for creativity purposes.
+    author_title: 
+    author_description: 
     location: Riga, Latvia
     follow: https://github.com/manualmanul
     # Social Links
