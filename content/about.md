@@ -18,3 +18,4 @@ You can also find me on these websites:
 More links:
 
 * [My PGP key](/pgp)
+* [My wishlist](/wishlist)
