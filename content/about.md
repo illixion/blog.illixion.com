@@ -14,3 +14,7 @@ You can also find me on these websites:
 * [Mastodon](https://yiff.life/@manual)
 * [Last.fm](https://last.fm/user/illixion)
 * [My reading list](https://t.me/manualslist)
+
+More links:
+
+* [My PGP key](/pgp)
