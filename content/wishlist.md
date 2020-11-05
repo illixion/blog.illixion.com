@@ -16,7 +16,7 @@ author = "Manual"
 |![Xiaomi Mijia 360° Panoramic Camera](/post_files/wishlist/pano360.jpg)|[Xiaomi Mijia 360° Panoramic Camera](https://www.aliexpress.com/item/4000837378897.html)|~92EUR|
 |![Raspberry Pi 4B 2GB](/post_files/wishlist/pi4b.jpg)|[Raspberry Pi 4B 4GB](https://www.amazon.de/-/en/Raspberry-ARM-Cortex-A72-WLAN-ac-Bluetooth-Micro-HDMI-Single/dp/B07TC2BK1X/)|~59EUR|
 |![Selfie Ring Light](/post_files/wishlist/ring%20light.jpg)|[Selfie Ring Light](https://www.aliexpress.com/item/4001079355903.html)<br>(26cm light arm stand option)|~27EUR|
-
+|![Better soldering iron](/post_files/wishlist/soldering%20iron.jpg)|[Better soldering iron](https://www.aliexpress.com/item/4000019437594.html)|15-20EUR
 ---
 
 Last updated: 2020/11/05
