@@ -10,6 +10,11 @@ PygmentsCodeFences: false
 googleAnalytics: "UA-146889782-3"      # UA-XXXXXXXX-X 
 permalinks:
   posts: /:year/:month/:filename/
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 
 taxonomies:
     category : categories
