@@ -55,12 +55,6 @@ menu:
       title: Tags
       url: /tags/
       weight: 4
-      
-    - identifier: pgp
-      name: PGP
-      title: PGP
-      url: /pgp/
-      weight: 5
 
     - identifier: about
       name: About
@@ -94,7 +88,6 @@ params:
     repository: icon-project
     books: icon-book-fill
     links: icon-friendship
-    pgp: icon-more
     about: icon-cup-fill
 
   # profile
@@ -110,11 +103,11 @@ params:
     # Social Links
     social:
       links:
+        rss: /index.xml
         github: https://github.com/manualmanul
         twitter: https://twitter.com/manualmanul
         # weibo: http://weibo.com/{yourid}
         # facebook: /
-        rss: /index.xml
       link_tooltip: true # enable the social link tooltip, options: true, false
   # Site
   site:
