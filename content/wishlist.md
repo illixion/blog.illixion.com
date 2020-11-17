@@ -44,11 +44,11 @@ author = "Manual"
 
 [Amazon.de list for international friends](https://www.amazon.de/-/en/hz/wishlist/ls/33KB3IWNOKJOA)
 
-**New!** Check whether anybody else has already pledged to buy this as a gift by clicking the *Check availability* link. <noscript>Unfortunately, JavaScript is disabled in your browser, so this won't work until you enable it.</noscript>
+**New!** Check whether anybody else has already pledged to gift an item by clicking the *Check availability* link. I pinky swear that I won't be checking this so as to not ruin the surprise. <noscript>Unfortunately, JavaScript is disabled in your browser, so this won't work until you enable it.</noscript>
 
 ---
 
-||Item|Price|Reservation|
+||Item|Price|Availability|
 |---|---|---|---|
 |![Panasonic Lumix G80/G85 w/ kit lens](/post_files/wishlist/lumix.jpg)|[Panasonic Lumix G80/G85 w/ kit lens](https://www.amazon.de/-/en/Panasonic-DMC-Lumix-system-camera/dp/B01LXB6P78)|~689EUR|<a href="#" onclick="checkItem('Panasonic Lumix G80/G85 w/ kit lens')">Check availability</a>|
 |![Audio-Technica AT2020 USB](/post_files/wishlist/AT2020USB.jpg)|[Audio-Technica AT2020 USB](https://www.amazon.co.uk/dp/B00B5ZX9FM)|~140EUR|<a href="#" onclick="checkItem('Audio-Technica AT2020 USB')">Check availability</a>|
