@@ -11,6 +11,7 @@ author = "Manual"
 
     function checkItem(name) {
         if (!(name in reservationList)) {
+            window.reservationList[name] = {}
             window.reservationList[name]["value"] = false
             fetch("https://wishlist-tracker.manul.workers.dev")
             .then(res => res.json())
