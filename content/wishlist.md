@@ -44,7 +44,7 @@ author = "Manual"
 
 [Amazon.de list for international friends](https://www.amazon.de/-/en/hz/wishlist/ls/33KB3IWNOKJOA)
 
-**New!** Check whether anybody else has already pledged to gift an item by clicking the *Check availability* link. I pinky swear that I won't be checking this so as to not ruin the surprise. <noscript>Unfortunately, JavaScript is disabled in your browser, so this won't work until you enable it.</noscript>
+**New!** Check whether anybody else has already pledged to gift an item by clicking the *Check availability* link. I pinky promise that I won't be checking this so as to not ruin the surprise. <noscript>Unfortunately, JavaScript is disabled in your browser, so this won't work until you enable it.</noscript>
 
 ---
 
