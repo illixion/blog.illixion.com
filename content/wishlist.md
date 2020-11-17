@@ -5,27 +5,38 @@ author = "Manual"
 +++
 
 <script>
-    let reservationList = await (await fetch("https://wishlist-tracker.manul.workers.dev")).json()
+    fetch("https://wishlist-tracker.manul.workers.dev")
+    .then(res => res.json())
+    .then(data => window.reservationList = data)
 
-    async function checkItem(name) {
+    function checkItem(name) {
         if (!(name in reservationList)) {
-            reservationList = await (await fetch("https://wishlist-tracker.manul.workers.dev/?item=force_refresh")).json()
+            window.reservationList[name]["value"] = false
+            fetch("https://wishlist-tracker.manul.workers.dev")
+            .then(res => res.json())
+            .then(data => window.reservationList = data)
         }
         if (reservationList[name]['value']) {
             alert(`Somebody else already reserved this item at ${new Date(+new Date()).toISOString().split('T')[0]}, you might want to get something else instead`)
             return
         }
         if (confirm(`${name} is not yet reserved by anyone. Do you wish to reserve this?`)) {
-            const response = await fetch(`https://wishlist-tracker.manul.workers.dev/?item=${name}&reserve`)
-            if (response.status === 200) {
-                alert("You've successfully reserved this item!")
-                reservationList[name]['value'] = true
-            } else if (response.status === 403) {
-                alert(`Somebody else already reserved this item at ${new Date(+new Date()).toISOString().split('T')[0]}, so you might want to get something else instead!`)
-            }
-            else {
+            fetch(`https://wishlist-tracker.manul.workers.dev/?item=${name}&reserve`)
+            .then(res => {
+                if res.status === 200 {
+                    alert("You've successfully reserved this item!")
+                    reservationList[name]['value'] = true
+                } else if (response.status === 403) {
+                    alert(`Somebody else already reserved this item at ${new Date(+new Date()).toISOString().split('T')[0]}, so you might want to get something else instead!`)
+                }
+                else {
+                    alert("Sorry, an error occured.")
+                }
+            })
+            .catch(err => {
+                console.log(err)
                 alert("Sorry, an error occured.")
-            }
+            })
         }
     }
 </script>
