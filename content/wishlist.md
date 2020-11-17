@@ -8,7 +8,7 @@ author = "Manual"
 
 ---
 
-|Photo|Item|Price|
+||Item|Price|
 |---|---|---|
 |![Panasonic Lumix G80/G85 w/ kit lens](/post_files/wishlist/lumix.jpg)|[Panasonic Lumix G80/G85 w/ kit lens](https://www.amazon.de/-/en/Panasonic-DMC-Lumix-system-camera/dp/B01LXB6P78)|~689EUR|
 |![Audio-Technica AT2020USB+](/post_files/wishlist/AT2020USB.jpg)|[Audio-Technica AT2020USB+](https://www.amazon.co.uk/dp/B00B5ZX9FM)|~140EUR|
@@ -17,6 +17,7 @@ author = "Manual"
 |![Raspberry Pi 4B 2GB](/post_files/wishlist/pi4b.jpg)|[Raspberry Pi 4B 4GB](https://www.amazon.de/-/en/Raspberry-ARM-Cortex-A72-WLAN-ac-Bluetooth-Micro-HDMI-Single/dp/B07TC2BK1X/)|~59EUR|
 |![Selfie Ring Light](/post_files/wishlist/ring%20light.jpg)|[Selfie Ring Light](https://www.aliexpress.com/item/4001079355903.html)<br>(26cm light arm stand option)|~27EUR|
 |![Better soldering iron](/post_files/wishlist/soldering%20iron.jpg)|[Better soldering iron](https://www.aliexpress.com/item/4000019437594.html)|15-20EUR
+|![Digital Love Synth Enamel Pin](/post_files/wishlist/synth%20pin.jpg)|[Digital Love Synth Enamel Pin](https://www.etsy.com/listing/735338626/digital-love-synth-enamel-pin)|11EUR<br>6EUR shipping
 ---
 
 Last updated: 2020/11/05
