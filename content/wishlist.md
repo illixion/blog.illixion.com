@@ -51,7 +51,7 @@ author = "Manual"
 ||Item|Price|Reservation|
 |---|---|---|---|
 |![Panasonic Lumix G80/G85 w/ kit lens](/post_files/wishlist/lumix.jpg)|[Panasonic Lumix G80/G85 w/ kit lens](https://www.amazon.de/-/en/Panasonic-DMC-Lumix-system-camera/dp/B01LXB6P78)|~689EUR|<a href="#" onclick="checkItem('Panasonic Lumix G80/G85 w/ kit lens')">Check availability</a>|
-|![Audio-Technica AT2020 USB](/post_files/wishlist/AT2020USB.jpg)|[Audio-Technica AT2020USB+](https://www.amazon.co.uk/dp/B00B5ZX9FM)|~140EUR|<a href="#" onclick="checkItem('Audio-Technica AT2020 USB')">Check availability</a>|
+|![Audio-Technica AT2020 USB](/post_files/wishlist/AT2020USB.jpg)|[Audio-Technica AT2020 USB](https://www.amazon.co.uk/dp/B00B5ZX9FM)|~140EUR|<a href="#" onclick="checkItem('Audio-Technica AT2020 USB')">Check availability</a>|
 |![Edifier R1280DB](/post_files/wishlist/R1280DB.jpg)|[Edifier R1280DB](https://www.rdveikals.lv/products/lv/163/285579/sort/1/filter/0_0_0_0/Edifier-R1280DB-Brown-datora-ska%C4%BCru%C5%86i.html)|~110EUR|<a href="#" onclick="checkItem('Edifier R1280DB')">Check availability</a>|
 |![Xiaomi Mijia 360° Panoramic Camera](/post_files/wishlist/pano360.jpg)|[Xiaomi Mijia 360° Panoramic Camera](https://www.aliexpress.com/item/4000837378897.html)|~92EUR|<a href="#" onclick="checkItem('Xiaomi Mijia 360° Panoramic Camera')">Check availability</a>|
 |![Raspberry Pi 4B 2GB](/post_files/wishlist/pi4b.jpg)|[Raspberry Pi 4B 4GB](https://www.amazon.de/-/en/Raspberry-ARM-Cortex-A72-WLAN-ac-Bluetooth-Micro-HDMI-Single/dp/B07TC2BK1X/)|~59EUR|<a href="#" onclick="checkItem('Raspberry Pi 4B 2GB')">Check availability</a>|
