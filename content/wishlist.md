@@ -10,10 +10,10 @@ author = "Manual"
     .then(data => window.reservationList = data)
 
     function checkItem(name) {
-        if (!(name in reservationList)) {
+        if (!(name in window.reservationList)) {
             window.reservationList[name] = {}
             window.reservationList[name]["value"] = false
-            fetch("https://wishlist-tracker.manul.workers.dev")
+            fetch("https://wishlist-tracker.manul.workers.dev/?item=force_refresh")
             .then(res => res.json())
             .then(data => window.reservationList = data)
         }
@@ -27,7 +27,7 @@ author = "Manual"
                 if (res.status === 200) {
                     alert("You've successfully reserved this item!")
                     reservationList[name]['value'] = true
-                } else if (response.status === 403) {
+                } else if (res.status === 403) {
                     alert(`Somebody else already reserved this item at ${new Date(+new Date()).toISOString().split('T')[0]}, so you might want to get something else instead!`)
                 }
                 else {
@@ -56,7 +56,7 @@ author = "Manual"
 |![Xiaomi Mijia 360° Panoramic Camera](/post_files/wishlist/pano360.jpg)|[Xiaomi Mijia 360° Panoramic Camera](https://www.aliexpress.com/item/4000837378897.html)|~92EUR|<a href="#" onclick="checkItem('Xiaomi Mijia 360° Panoramic Camera')">Check availability</a>|
 |![Raspberry Pi 4B 2GB](/post_files/wishlist/pi4b.jpg)|[Raspberry Pi 4B 4GB](https://www.amazon.de/-/en/Raspberry-ARM-Cortex-A72-WLAN-ac-Bluetooth-Micro-HDMI-Single/dp/B07TC2BK1X/)|~59EUR|<a href="#" onclick="checkItem('Raspberry Pi 4B 2GB')">Check availability</a>|
 |![Selfie Ring Light](/post_files/wishlist/ring%20light.jpg)|[Selfie Ring Light](https://www.aliexpress.com/item/4001079355903.html)<br>(26cm light arm stand option)|~27EUR|<a href="#" onclick="checkItem('Selfie Ring Light')">Check availability</a>|
-|![Better soldering iron](/post_files/wishlist/soldering%20iron.jpg)|[Better soldering iron](https://www.aliexpress.com/item/4000019437594.html)|15-20EUR<a href="#" onclick="checkItem('Better soldering iron')">Check availability</a>|
+|![Better soldering iron](/post_files/wishlist/soldering%20iron.jpg)|[Better soldering iron](https://www.aliexpress.com/item/4000019437594.html)|15-20EUR|<a href="#" onclick="checkItem('Better soldering iron')">Check availability</a>|
 |![Digital Love Synth Enamel Pin](/post_files/wishlist/synth%20pin.jpg)|[Digital Love Synth Enamel Pin](https://www.etsy.com/listing/735338626/digital-love-synth-enamel-pin)|11EUR<br>6EUR shipping|<a href="#" onclick="checkItem('Digital Love Synth Enamel Pin')">Check availability</a>|
 ---
 
