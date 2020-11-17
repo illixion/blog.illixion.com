@@ -23,7 +23,7 @@ author = "Manual"
         if (confirm(`${name} is not yet reserved by anyone. Do you wish to reserve this?`)) {
             fetch(`https://wishlist-tracker.manul.workers.dev/?item=${name}&reserve`)
             .then(res => {
-                if res.status === 200 {
+                if (res.status === 200) {
                     alert("You've successfully reserved this item!")
                     reservationList[name]['value'] = true
                 } else if (response.status === 403) {
