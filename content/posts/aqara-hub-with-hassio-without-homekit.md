@@ -22,17 +22,15 @@ So what's actually stopping you from enabling test mode and adding this hub like
 
 ### So what's wrong with HomeKit?
 
-Not much actually. Home Assistant has supported controlling HomeKit devices for a while now, and in a recent update it actually gained enhanced support for this specific hub. No longer does it take 30 seconds for accessories to update, making this a great way to integrate an Aqara HomeKit hub with Home Assistant. However, I've found that this method doesn't support some accessories that I use, one of which is the Wireless Mini Button. This was a deal-breaker for me, so I've abandoned this setup.
+Not much actually. Home Assistant has supported controlling HomeKit devices for a while now, and in a recent update it actually gained enhanced support for this specific hub. No longer does it take 30 seconds for accessories to update, making this a great way to integrate an Aqara HomeKit hub with Home Assistant. However, I've found that this method doesn't support some accessories that I use, for example the Wireless Mini Switch. This was a deal-breaker for me, so I've abandoned this setup.
 
-If all of your accessories work with this plugin though, you can stop reading this article, head over to [this page](https://www.home-assistant.io/integrations/homekit_controller/) and you'll spend way less time. Trust me on this one.
+If all of your accessories work with this plugin though, you can stop reading this article, head over to [this page](https://www.home-assistant.io/integrations/homekit_controller/) and you'll spend way less time.
 
-## HomeKit Controller isn't for me, let's hear the other option
+## HomeKit Controller isn't for me
 
-Aqara Hub (aka *lumi.gateway.aqhm01* or *lumi.gateway.aqhm02*) is a small embedded Linux machine with all of the same UART ports and UBoot that most other IoT things have these days, which means that you can get yourself a root shell and start poking around its insides.
+Aqara Hub (aka *lumi.gateway.aqhm01* or *lumi.gateway.aqhm02*) is a small embedded Linux machine with all of the same UART ports and UBoot that most other IoT things have these days, which means that you can get yourself a root shell and start poking around inside.
 
-Furthermore, people have already made a custom client for this hub that can be used to communicate with Home Assistant natively, making it a viable alternative to the HomeKit Controller.
-
-## T1me 2 hax
+Furthermore, people have already made a custom client for this hub that can be used to communicate with Home Assistant natively, making it a viable alternative to HomeKit.
 
 To start, you'll need to ensure that you at least have the following items:
 
@@ -50,11 +48,11 @@ frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Once you've reached the root shell, enable SSH on boot by modifying `/etc/rc.local` and adding a new line containing `/etc/init.d/dropbear start` right before `/home/root/fac/fac_test`. Afterwards, you can safely unplug the hub, remove the soldered wires and put it back together. It will now be accessible over SSH with the root password that you've set up earlier.
 
-Now that you've got a shell, you'll need to install an alternative client that can enable decrypted communication with Home Assistant. For that, we'll install [roth-m's alternative miio_gateway](https://github.com/roth-m/miioclient-mqtt) alongside the original one. Just to reiterate, we can't run both the original miio_gateway and this version, so all of the cloud functionality of this hub will stop working while it's running. However, there is a watchdog present, so if you run `killall miio_client` the original binary will be restarted shortly afterwards.
+Now that you've got a shell, you'll need to install an alternative client that can enable decrypted communication with Home Assistant. For that, we'll install [roth-m's alternative miio_gateway](https://github.com/roth-m/miioclient-mqtt) alongside the original one. Just to reiterate, we can't run both the original miio_gateway and this version, so all of the cloud functionality of this hub will stop working while it's running. However, there is a watchdog present, so if you run `killall miio_client` the original cloud client will be restarted shortly afterwards.
 
-Begin by downloading miio_gateway to your computer, which can be found at [this link](https://github.com/roth-m/miioclient-mqtt/raw/master/miio_client/miio_client). `wget`'ing it directly on the hub from GitHub won't work as SSL doesn't seem to work too well on this little device. Oh well, SCP still works. `scp` the binary to the hub by issuing a command like `scp miio_client root@192.168.1.2:/home/root/miio_client`.
+Begin by downloading miio_gateway to your computer, which can be found at [this link](https://github.com/roth-m/miioclient-mqtt/raw/master/miio_client/miio_client). `wget`'ing it directly on the hub from GitHub won't work as TLS doesn't seem to work on this device. Oh well, SCP still works. `scp` the binary to the hub by issuing a command like `scp miio_client root@192.168.1.2:/home/root/miio_client`.
 
-Once it's on the hub, you can SSH into it and run `chmod +x miio_client; killall miio_client; ./miio_client & ; disown` to start it. To make it run on every boot, add `sleep 20; killall miio_client; ./miio_client &` in `/etc/rc.local` right after the dropbear line that we've added earlier. Do not replace the original binary as it's needed to establish a Wi-Fi connection.
+Once it's on the hub, you can SSH into it and run `chmod +x miio_client; killall miio_client; ./miio_client & ; disown` to start it. To make it run on every boot, add `sleep 20; killall miio_client; ./miio_client &` in `/etc/rc.local` right after the dropbear line that we've added earlier. Do not replace the original binary as it's required to establish a Wi-Fi connection.
 
 ## Integrating it into Home Assistant
 
