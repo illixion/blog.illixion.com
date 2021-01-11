@@ -18,17 +18,21 @@ author = "Manual"
             .then(data => window.reservationList = data)
         }
         if (reservationList[name]['value']) {
-            alert(`Somebody else already reserved this item at ${new Date(+new Date()).toISOString().split('T')[0]}, you might want to get something else instead`)
+            alert(`Somebody else has already reserved this item at ${new Date(+new Date()).toISOString().split('T')[0]}`)
             return
         }
-        if (confirm(`${name} is not yet reserved by anyone. Do you wish to reserve this?`)) {
-            fetch(`https://wishlist-tracker.catto.workers.dev/?item=${name}&reserve`)
+        let contactInfo = prompt(`${name} is not yet reserved by anyone.\n\nPlease leave your name and contact info and press OK to confirm reservation.\nPress CANCEL to cancel.`)
+        if (contactInfo === "") {
+            contactInfo = "Someone"
+        }
+        if (contactInfo !== null) {
+            fetch(`https://wishlist-tracker.catto.workers.dev/?item=${name}&contact=${contactInfo}&reserve`)
             .then(res => {
                 if (res.status === 200) {
                     alert("You've successfully reserved this item!")
                     reservationList[name]['value'] = true
                 } else if (res.status === 403) {
-                    alert(`Somebody else already reserved this item at ${new Date(+new Date()).toISOString().split('T')[0]}, so you might want to get something else instead!`)
+                    alert(`Somebody else has already reserved this item at ${new Date(+new Date()).toISOString().split('T')[0]}`)
                 }
                 else {
                     alert("Sorry, an error occured.")
