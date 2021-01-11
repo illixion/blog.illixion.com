@@ -5,7 +5,7 @@ author = "Manual"
 +++
 
 <script>
-    fetch("https://wishlist-tracker.manul.workers.dev")
+    fetch("https://wishlist-tracker.catto.workers.dev")
     .then(res => res.json())
     .then(data => window.reservationList = data)
 
@@ -13,7 +13,7 @@ author = "Manual"
         if (!(name in window.reservationList)) {
             window.reservationList[name] = {}
             window.reservationList[name]["value"] = false
-            fetch("https://wishlist-tracker.manul.workers.dev/?item=force_refresh")
+            fetch("https://wishlist-tracker.catto.workers.dev/?item=force_refresh")
             .then(res => res.json())
             .then(data => window.reservationList = data)
         }
@@ -22,7 +22,7 @@ author = "Manual"
             return
         }
         if (confirm(`${name} is not yet reserved by anyone. Do you wish to reserve this?`)) {
-            fetch(`https://wishlist-tracker.manul.workers.dev/?item=${name}&reserve`)
+            fetch(`https://wishlist-tracker.catto.workers.dev/?item=${name}&reserve`)
             .then(res => {
                 if (res.status === 200) {
                     alert("You've successfully reserved this item!")
