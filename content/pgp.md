@@ -4,17 +4,7 @@ description = "My PGP key"
 author = "Manual"
 +++
 
-[PGP is bad and you should stop using it.](https://latacora.micro.blog/2019/07/16/the-pgp-problem.html) age is a more modern, simple and cryptographically sound way to encrypt messages and files, and I encourage you to use it instead.
-
-To encrypt a message with my key using age, use this command:
-
-```shell
-age -r "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK3rN5+i/IqYCoHlKsz1MC1ESdBvSgSxrbu+QhGbedeV Manual@YubiKey5" -a -o encrypted_message.txt message.txt
-```
-
-But I understand that not everybody is willing to change their ways, so I've provided my PGP key below. Note that it's an ed25519 key however, so if your GPG client is too old to support those, update it.
-
-```
+```pgp
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mDMEX4pU4RYJKwYBBAHaRw8BAQdAUo0LGj51iAOO9IqU1uAgNBRRCPGXKM+btnNa
