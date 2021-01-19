@@ -10,7 +10,7 @@ categories:
 - general
 ---
 
-It happens to the best of us. You're using a password manager like everybody is supposed to, but you've kept using PIN and biometric authentication for longer than you can remember. People tend to forget things that they don't use often, and so one day realize that you need to reinstall the BitWarden app and you forgot the one password that had to remember. Drat!
+It happens to the best of us. You're using a password manager like everybody is supposed to, but you've kept using PIN and biometric authentication for longer than you can remember. People tend to forget things that they don't use often, and so one day realize that you need to reinstall the BitWarden app and you forgot the one password that you had to remember. Drat!
 
 BitWarden forums will tell you that without a master password, your data is gone forever, and they will be only partially correct. BitWarden has no proper fail state for forgetting the master password, so if you can't remember it, you can no longer use any of the "secure" functions which includes stuff like exporting data. What they don't tell you though is that your PIN code encrypts your vault master key, which is stored on your machine, and so it's possible to do most things without knowing it.
 
@@ -18,7 +18,7 @@ BitWarden forums will tell you that without a master password, your data is gone
 
 I am by no means an expert and I've only barely scratched the surface with my analysis, so take what follows with a grain of salt.
 
-* Your vault and the private key get stored on your device
+* Your vault and the private key are stored on your device
 * Master password and the PIN code are able to decrypt the private key
 * The private key is what actually encrypts your local vault
 
