@@ -36,12 +36,12 @@ author = "Manual"
                     alert(`Somebody else has already reserved this item at ${new Date(reservationList[name]['reserved']).toISOString().split('T')[0]}\n\nThey left the following contact info:\n${reservationList[name]['contactInfo']}`)
                 }
                 else {
-                    alert("Sorry, an error occured.")
+                    alert("Sorry, an error occured. Check the developer console for more information.")
                 }
             })
             .catch(err => {
                 console.log(err)
-                alert("Sorry, an error occured.")
+                alert("Sorry, an error occured. Check the developer console for more information.")
             })
         }
     }
