@@ -4,10 +4,9 @@ title: How to recover BitWarden data with only a PIN
 date: "2020-08-01"
 summary: You forgot your master password. It happens to the best of us. Don't worry about your passwords however, for there is a way to recover them if you still remember your PIN
 tags: 
-- tipsandtricks
 - bitwarden
 categories:
-- general
+- tutorials
 ---
 
 It happens to the best of us. You're using a password manager like everybody is supposed to, but you've kept using PIN and biometric authentication for longer than you can remember. People tend to forget things that they don't use often, and so one day realize that you need to reinstall the BitWarden app and you forgot the one password that you had to remember. Drat!

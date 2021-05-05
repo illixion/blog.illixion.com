@@ -4,10 +4,10 @@ title: How to enable Telegram's "Filter New Chats from Non-Contacts"
 date: "2020-07-27"
 summary: Telegram seems to limit who can see the new "Filter New Chats from Non-Contacts" setting to people who have already received a lot of spam. Thankfully, it's still possible to enable it before that happens.
 tags: 
-- tutorial
 - telegram
+- python
 categories:
-- general
+- tutorials
 ---
 
 Telegram seems to limit who can see the new ["Filter New Chats from Non-Contacts"](https://telegram.org/blog/profile-videos-people-nearby-and-more#filter-new-chats-from-non-contacts) setting to people who have already received a lot of spam. How availability is determined is unknown to me. Thankfully, this option is available through the Telegram Client API, so it's still possible to enable it before that happens.

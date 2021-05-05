@@ -5,8 +5,9 @@ date: "2020-04-12"
 summary: It's well known that Safari doesn't support VP9 or WebM, but I've found a workaround that doesn't involve switching to Chrome. Read on!
 tags: 
 - macos
+- safari
 categories:
-- tipsandtricks
+- tutorials
 ---
 
 **Update:** macOS Big Sur 11.3 now supports WebM in Safari, so this may no longer be necessary. I'll update the article once I test it out for myself. Keep reading if you like the IINA interface more than YouTube's though.
