@@ -9,6 +9,8 @@ categories:
 - tipsandtricks
 ---
 
+**Update:** macOS Big Sur 11.3 now supports WebM in Safari, so this may no longer be necessary. I'll update the article once I test it out for myself. Keep reading if you like the IINA interface more than YouTube's though.
+
 It's well known that Safari doesn't support playing VP9 or WebM videos out of the box, but I've found a workaround that doesn't involve installing Chrome or having to launch VLC every time.
 
 For context, I use Safari almost exclusively due to its simplicity, features and integration with iOS devices. Unfortunately, due to Apple only supporting licensed video codecs like HEVC, Safari has 0 support for VP8/VP9. What this means is that YouTube on Safari will not play above 1080p no matter what, and WebM's won't play at all. However, you don't have to use YouTube's web player. Enter IINA:
