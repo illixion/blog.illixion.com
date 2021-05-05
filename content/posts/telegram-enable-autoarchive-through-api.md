@@ -15,24 +15,11 @@ Telegram seems to limit who can see the new ["Filter New Chats from Non-Contacts
 This is a brief write-up and I won't go into the details of each step. You're expected to know how to use the command line of your preferred OS.
 
 1. Generate Telegram Application API keys as described here: [https://core.telegram.org/api/obtaining_api_id](https://core.telegram.org/api/obtaining_api_id)
-2. Install Python 3, Pip and Git
-3. Run the following shell commands (Linux/Mac, Windows is slightly different):
-
-```shell
-git clone https://github.com/LonamiWebs/Telethon.git
-cd Telethon
-python3 -m venv env
-source env/bin/activate
-pip3 install -r requirements.txt
-python3 setup.py gen
-python3
-```
+2. Install Python 3, Pip and Git, as well as the **Telethon** package
 
 3. Now that your environment is set up, run the following Python commands in the interpreter:
 
 ```python
-import os, sys
-sys.path.insert(0, os.getcwd())
 from telethon import functions, types
 from telethon.sync import TelegramClient
 
