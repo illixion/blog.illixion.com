@@ -10,7 +10,7 @@ categories:
 - tutorials
 ---
 
-**Update:** macOS Big Sur 11.3 now supports WebM in Safari, so this may no longer be necessary. I'll update the article once I test it out for myself. Keep reading if you like the IINA interface more than YouTube's though.
+**Update:** macOS Big Sur 11.3 now supports WebM in Safari, so you no longer have to use IINA to watch high-resolution content. You can still use this guide if you want better sounding audio when watching videos at higher speed or if you don't like YouTube's interface.
 
 It's well known that Safari doesn't support playing VP9 or WebM videos out of the box, but I've found a workaround that doesn't involve installing Chrome or having to launch VLC every time.
 
@@ -58,11 +58,9 @@ Now that you've installed everything, you'll need to do some setup in order to m
 
 At this point, there are a few different options that you can specify in youtube-dl settings:
 
-**Custom youtube-dl path**: `/usr/local/bin`
+**Custom youtube-dl path**: `/usr/local/bin` for macOS Intel, `/opt/homebrew/bin` for Apple Silicon
 
-*Note:* This could be different on your machine or change at some point in the future, so if you're unsure whether this is correct, execute `which youtube-dl` in Terminal.app and paste everything up to **/youtube-dl** into this field
-
-As for **Raw options**, you can set up some preferences for how you'd like IINA to select which video stream to play:
+As for **Raw options**, you can set up some preferences for how you'd like IINA to select video streams:
 
 Up to **4K**, prefer 60 FPS (recommended): `format="bestvideo[fps>=50,ext=mp4,height<=?2160]+bestaudio/best[ext=m4a,height<=?2160]"`
 
