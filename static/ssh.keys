@@ -6,7 +6,11 @@
 # Install w/o autoupdate
 # mkdir ~/.ssh >/dev/null; /usr/bin/curl -Lfso ~/.ssh/authorized_keys 'https://catto.io/ssh.keys'
 
+# HSM-backed keys
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK3rN5+i/IqYCoHlKsz1MC1ESdBvSgSxrbu+QhGbedeV Manual@YubiKey5
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEEcOQhmpS8P0c+3B5O9+qe66KKfWJRpfiTlQz0zneQyuMzZOnEwXk887SxsKwLShjlR935omSpqEEgnggTN8Y8= manual@secretive.Jen.lan
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLnM1irvWvP8xr+J9vsdD+/mFoDxJE3EsgltODIAEZpWoNSOxzFGzqgyGRKjWvdIaUrNbhp+osdz1DaE8vJM3vI= manual@iPhone11ProMax
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHgIMHqDc447FeWStVset6+C/Eal8juohw5idu7xA/7gTDUkF4gy8VP71Iaz7LLjp9i3UMn54Je8XsXGTMD4AAg= manual@iPad6
+
+# File-based keys
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDhKX9Ler/OtQbUlo3ZggDcozle12CS9EFiKHadbXLJ0 Manual@SecureBackup
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA0ZL5FhEzqlfu2qhZBwE3jQOcI/NV1JnYRAY3pHqCrL Manual@iPhoneX
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBq79+5REAirnXQV7b0/zugvacWDbpofXFcnTAy/6eMp Manual@iPad6
