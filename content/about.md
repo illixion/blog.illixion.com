@@ -11,9 +11,8 @@ You can find all of my open-source work on [my GitHub](https://github.com/illixi
 
 You can also find me on these websites:
 
+* [YouTube](https://www.youtube.com/channel/UC8Tutzr0UHCWFw14VNazwEw)
 * [Mastodon](https://yiff.life/@manual)
-* [Last.fm](https://last.fm/user/illixion)
-* [My reading list](https://t.me/manualslist)
 
 More links:
 
