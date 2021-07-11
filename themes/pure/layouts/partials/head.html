@@ -10,7 +10,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" 
+      content="#898DF8"
+      media="(prefers-color-scheme: light)">
+  <meta name="theme-color" 
+      content="#898DF8"
+      media="(prefers-color-scheme: dark)">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
   <meta http-equiv="window-target" content="_top" />
   <!-- baidu & google verification  -->
@@ -52,7 +57,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="msapplication-TileColor" content="#00aba9">
-  <meta name="theme-color" content="#ffffff">
 
   <!-- Canonical links -->
   {{ range .AlternativeOutputFormats -}}
