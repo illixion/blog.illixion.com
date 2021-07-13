@@ -5,7 +5,7 @@ aliases = ["about-me","contact"]
 author = "Manual"
 +++
 
-Hello and welcome to this technoblog! I'm Manual and I pretend to be a cat on the internet, but IRL I'm a software developer, DevOps engineer and a cybersecurity connoisseur also known as ***REMOVED*** ***REMOVED***.
+Hello and welcome to this technoblog! I'm Manual and I specialize in hardware hacking, software development and infosec. I also work as a DevOps Analyst professionally.
 
 You can find all of my open-source work on [my GitHub](https://github.com/manualmanul).
 

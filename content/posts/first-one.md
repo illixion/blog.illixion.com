@@ -15,7 +15,7 @@ So, here it is. Welcome to my personal World Wide Web internet page! Available r
 |:--:|
 | *(I'm not that old, I swear)* |
 
-Anyway, I've heard that people usually put some kinda intros on their first blog pages, so let's try that. I'm ***REMOVED***, I'm a junior developer in his twenties and my hobbies include dabbling in infosec, making LEDs go blinky-blinky and screaming at computers until they start working.
+Anyway, I've heard that people usually put some kinda intros on their first blog pages, so let's try that. I'm Manual, a junior developer in his twenties, and my hobbies include dabbling in infosec, making LEDs go blinky-blinky and screaming at computers until they start working.
 
 Riveting, I know.
 
