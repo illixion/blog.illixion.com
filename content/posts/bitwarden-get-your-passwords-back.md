@@ -41,7 +41,7 @@ Here's what you need to do:
 
 | ![Safari screenshot](/post_files/bitwarden-get-your-passwords-back/safari.png) |
 |:--:|
-| *Chrome* |
+| *Safari* |
 
   * Firefox: [follow these instructions](https://stackoverflow.com/questions/30752698/how-can-open-firefox-developer-tools-in-my-extensions-sidebar)
 
