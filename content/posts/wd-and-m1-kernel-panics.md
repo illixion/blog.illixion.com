@@ -2,7 +2,7 @@
 author: Manual
 title: Western Digital drives and kernel panics on M1 Macs
 date: "2020-09-03"
-summary: 
+summary: I've been experiencing a strange kernel panic related to the SoC watchdog on my M1 Mac for many months, and I believe I might've found a fix.
 tags: 
 - mac
 - m1
