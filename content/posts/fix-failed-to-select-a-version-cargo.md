@@ -22,13 +22,13 @@ rustc 1.55.0
 error: failed to select a version for the requirement `anyhow = "=1.0.44"`
 candidate versions found which didn't match: 1.0.42, 1.0.41, 1.0.40, ...
 location searched: crates.io index
-required by package `fuzzysearch-cli v0.2.0 (/***/fuzzysearch-cli)`
+required by package `fuzzysearch-cli v0.2.0 (/*snip*/rust-project)`
 ❯ cargo update
     Updating crates.io index
 error: failed to select a version for the requirement `clap = "^3.0.0-beta.5"`
 candidate versions found which didn't match: 2.33.3, 2.33.2, 2.33.1, ...
 location searched: crates.io index
-required by package `fuzzysearch-cli v0.2.0 (/***/fuzzysearch-cli)`
+required by package `fuzzysearch-cli v0.2.0 (/*snip*/rust-project)`
 ```
 
 ## Solution
