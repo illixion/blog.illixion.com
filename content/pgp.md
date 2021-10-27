@@ -24,4 +24,4 @@ SwfHsPGPXwI=
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-**To verify the authenticity of this page**, go to its GitHub commit history and check if the last commit has been verified. Direct link to the commit history of this page: <https://github.com/manualmanul/catto.io/commits/master/content/pgp.md>
+**To verify the authenticity of this page**, go to its GitHub commit history and check if the last commit has been verified. Direct link to the commit history of this page: <https://github.com/manualmanul/catto.io/commits/main/content/pgp.md>
