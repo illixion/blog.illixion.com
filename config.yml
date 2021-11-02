@@ -123,7 +123,7 @@ params:
       url: favicon.ico
     title: Manual
     favicon: favicon.ico
-    board: "<p>I now have a YouTube channel! Check it out here: <strong><a href=\"https://www.youtube.com/channel/UCGXYaSSL9teAg9Z5Kjxw8oA\">Manual on YouTube</a></strong>. More videos coming soon.</p>" # 公告牌
+    board: "<p>I've created a new brand name for everything music and video related that I do. I haven't published anything yet, but feel free to subscribe to <strong><a href=\"https://www.youtube.com/channel/UC8Tutzr0UHCWFw14VNazwEw\">my YT channel</a></strong> for updates.</p>" # 公告牌
 
   # Share
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
