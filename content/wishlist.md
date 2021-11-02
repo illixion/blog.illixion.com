@@ -52,7 +52,7 @@ author = "Manual"
 ||Item|Price|Availability|
 |---|---|---|---|
 |![Elgato Stream Deck](/post_files/wishlist/streamdeck.jpg)|[Elgato Stream Deck](https://www.amazon.de/-/en/Corsair-Elgato-Stream-Deck-Buttons/dp/B06W2KLM3S)|~150EUR|<a href="#" onclick="checkItem('Elgato Stream Deck')">Check availability</a>|
-|![Flare Neo](/post_files/wishlist/flareneo.jpg)|[Flare Neo](https://flairespresso.com/product/the-neo/)|~108EUR|<a href="#" onclick="checkItem('Flare Neo')">Check availability</a>|
+|![Flair Neo](/post_files/wishlist/flairneo.jpg)|[Flair Neo](https://www.gemoss.lv/shop/lv/riks-kafijas-pagatavosanai-flair-neo-peleks-647213148046)|~100EUR|<a href="#" onclick="checkItem('Flair Neo')">Check availability</a>|
 |![Teenage Engineering PO-33 K.O!](/post_files/wishlist/te-po-33.jpg)|[Teenage Engineering PO-33 K.O!](https://soundium.lv/teenage-engineering-po-33-k-o)|99EUR|<a href="#" onclick="checkItem('Teenage Engineering PO-33 K.O!')">Check availability</a>|
 |![Microwave](/post_files/wishlist/microwave.jpg)|Microwave|~50EUR|<a href="#" onclick="checkItem('Microwave')">Check availability</a>|
 |![Selfie Ring Light](/post_files/wishlist/ring%20light.jpg)|[Selfie Ring Light](https://www.aliexpress.com/item/4001079355903.html)<br>(26cm light arm stand option)|~27EUR|<a href="#" onclick="checkItem('Selfie Ring Light')">Check availability</a>|
