@@ -97,7 +97,7 @@ params:
   # profile
   profile:
     enabled: true # Whether to show profile bar
-    avatar: manual.png
+    avatar: /manual.png
     gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
     author: Manual
     author_title: 
