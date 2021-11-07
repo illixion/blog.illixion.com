@@ -5604,7 +5604,7 @@ pre .js .function {
 }
 
 pre {
-  background: #fafafa;
+  background: #f7f7f7;
   margin: 10px 0;
   padding: 15px 10px;
   overflow: auto;
@@ -5647,22 +5647,8 @@ pre code.lang:after {
 }
 pre {
   position: relative;
-  padding: 38px 10px 8px;
+  padding: 35px 10px 8px;
   border-radius: 4px;
-}
-
-pre:before {
-  display: block;
-  content: '';
-  height: 32px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #f6f6f6;
-  padding: 0 10px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
 }
 
 pre:after {
@@ -9575,10 +9561,6 @@ body.okayNav-loaded {
   
   pre code:after {
     background-color: #222;
-  }
-  
-  pre:before {
-    background-color: #555;
   }
 
   .hljs {
