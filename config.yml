@@ -156,7 +156,7 @@ params:
       repo: manualmanul/catto.io
       issueterm: pathname
       label: comment
-      theme: github-light
+      theme: preferred-color-scheme
 
   # Donate
   donate:
