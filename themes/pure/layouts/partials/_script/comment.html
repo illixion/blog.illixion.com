@@ -68,6 +68,15 @@
     utterances.setAttribute('crossorigin', "anonymous")
     utterances.setAttribute('async', true)
     utterances.setAttribute('src', "https://utteranc.es/client.js")
-    document.getElementById("comments").appendChild(utterances);
+
+    try {
+        document.getElementById("comments").appendChild(utterances);
+    } catch (e) {
+        if (e instanceof TypeError) {
+            console.log("Didn't find a comments element to append to")
+        } else {
+            console.error(e)
+        }
+    }
 </script>
 {{- end }}
