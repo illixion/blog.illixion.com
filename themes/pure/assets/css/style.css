@@ -5620,8 +5620,6 @@ pre {
 
 code {
   text-shadow: 0 1px #fff;
-  padding: 0.2em 0.4em;
-  margin: 0 0.3em;
   color: #555;
   background: #eee;
   border-radius: 3px;
@@ -5631,7 +5629,6 @@ code {
 pre code {
   background: none;
   text-shadow: none;
-  padding: 0;
 }
 
 pre code:after {
@@ -5650,7 +5647,7 @@ pre code.lang:after {
 }
 pre {
   position: relative;
-  padding: 32px 10px 0 10px;
+  padding: 38px 10px 8px;
   border-radius: 4px;
 }
 
@@ -9576,12 +9573,6 @@ body.okayNav-loaded {
     text-shadow: none;
   }
   
-  pre code {
-    background: none;
-    text-shadow: none;
-    padding: 0;
-  }
-  
   pre code:after {
     background-color: #222;
   }
@@ -9593,6 +9584,7 @@ body.okayNav-loaded {
   .hljs {
     background: #222 !important;
     color: #fff !important;
+    padding: 0 !important;
   }
 
   blockquote {
