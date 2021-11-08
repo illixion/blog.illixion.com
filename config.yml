@@ -1,6 +1,8 @@
+baseURL: https://catto.io/
 theme: pure
 title: Manual
 defaultContentLanguage: en
+canonifyURLs: false
 footnoteReturnLinkContents: ↩
 hasCJKLanguage: true
 paginate: 7
