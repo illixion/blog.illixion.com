@@ -1,6 +1,8 @@
+baseURL: https://illixion.com/
 theme: pure
 title: Manual
 defaultContentLanguage: en
+canonifyURLs: false
 footnoteReturnLinkContents: ↩
 hasCJKLanguage: true
 paginate: 7
