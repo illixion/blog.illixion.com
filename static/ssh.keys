@@ -7,7 +7,7 @@
 # mkdir ~/.ssh >/dev/null; /usr/bin/curl -Lfso ~/.ssh/authorized_keys 'https://catto.io/ssh.keys'
 
 # HSM-backed keys
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK3rN5+i/IqYCoHlKsz1MC1ESdBvSgSxrbu+QhGbedeV Manual@YubiKey5
+sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAICE00pS3azLXW4GKEaqBJt03Z6UX0vs4XfjZZ8nZJaIZAAAABHNzaDo= manual@YubiKey5
 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEEcOQhmpS8P0c+3B5O9+qe66KKfWJRpfiTlQz0zneQyuMzZOnEwXk887SxsKwLShjlR935omSpqEEgnggTN8Y8= manual@secretive.Jen.lan
 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKSwSNYzfAB3DC78D6OPhgNtjK7pa/CLxjmj9xlym/m3p9vEvagajvYUCksuiGU9a7Oq0DhlBe7/YJMsardnYLo= manual@iPhone11ProMax
 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOBw9SIgPc8Ace1cZYEFJktJJFvfyL504C+CesoAM3CU87SNTt60h4KshcBi3g28q0dMze5VxKYvm9ZzUujEX8I= manual@iPad6
