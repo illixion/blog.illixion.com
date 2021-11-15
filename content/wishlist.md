@@ -52,6 +52,7 @@ author = "Manual"
 ||Item|Price|Availability|
 |---|---|---|---|
 |![Elgato Stream Deck](/post_files/wishlist/streamdeck.jpg)|[Elgato Stream Deck](https://www.amazon.de/-/en/Corsair-Elgato-Stream-Deck-Buttons/dp/B06W2KLM3S)|~150EUR|<a href="#" onclick="checkItem('Elgato Stream Deck')">Check availability</a>|
+|![FiiO BTR5-2021](/post_files/wishlist/fiiobtr5.jpg)|[FiiO BTR5-2021](https://www.amazon.com/FiiO-BTR5-2021-Receiver-Bluetooth-Headphone/dp/B09G9TNB2R/)|~120EUR|<a href="#" onclick="checkItem('FiiO BTR5-2021')">Check availability</a>|
 |![Flair Neo](/post_files/wishlist/flairneo.jpg)|[Flair Neo](https://www.gemoss.lv/shop/lv/riks-kafijas-pagatavosanai-flair-neo-peleks-647213148046)|~100EUR|<a href="#" onclick="checkItem('Flair Neo')">Check availability</a>|
 |![Teenage Engineering PO-33 K.O!](/post_files/wishlist/te-po-33.jpg)|[Teenage Engineering PO-33 K.O!](https://soundium.lv/teenage-engineering-po-33-k-o)|99EUR|<a href="#" onclick="checkItem('Teenage Engineering PO-33 K.O!')">Check availability</a>|
 |![Microwave](/post_files/wishlist/microwave.jpg)|Microwave|~50EUR|<a href="#" onclick="checkItem('Microwave')">Check availability</a>|
