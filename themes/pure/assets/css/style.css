@@ -9575,7 +9575,7 @@ body.okayNav-loaded {
   blockquote {
     border-left: 3px solid #555;
     border: 1px dotted #555;
-    background-color: var(--main-bg-color);
+    background-color: #222;
   }
 
   .panel {
