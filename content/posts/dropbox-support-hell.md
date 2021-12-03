@@ -524,8 +524,12 @@ I send a screenshot of the knowledge base article in a reply. I expect nothing. 
 
 Perhaps there's some deeper meaning to me weaving through the 7 layers of customer support hell, finding solutions to being stonewalled, and perseverance. I'm too tired to look for it though. I just wanted to re-experience my Minecraft worlds one final time.
 
-## Part 4..?
+## Part 4 - The End
 
-This is an ongoing story, and maybe me, Candacejack and others still have a chance at getting their files back if this story gets enough traction. But really, what I as trying to convey throughout this article, is that **you should stop using Dropbox.** They don't care about you or your files, all they want is your money. Move to any other service like Google Drive, or a self-hosted solution like Nextcloud. There are many alternatives to Dropbox, and they're all better at preserving your files than Dropbox.
+(updated on 03/12/2021)
+
+After posting this article to the forum thread mentioned above (and subsequently it being deleted, thanks mods), my ticket finally got escalated to someone who is an "account security manager" at Dropbox, and after verifying my identity, they helped me with resetting the password. It's unfortunate that this is what I had to do through to get actual help, but it's something, I guess.
+
+The point I've made before still stands though, and it's that **you should stop using Dropbox.** They don't care about you or your files, all they want is your money. Move to any other service like Google Drive, or a self-hosted solution like Nextcloud. There are many alternatives to Dropbox, and they're all better at preserving your files than Dropbox.
 
 All I hope is that this article will convince at least one person to look at other options before putting anything important into Dropbox. That is all.
