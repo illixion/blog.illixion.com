@@ -10,6 +10,12 @@ categories:
 - tutorials
 ---
 
+**Update (2022/01/02)**
+
+This method no longer works as Telegram has implemented a server-side check for whether you're allowed to use this feature. There aren't any other workarounds as far as I know. I've opened a feature request on the Telegram bug tracker, please consider giving it an upvote and a comment if you'd like to see this become available for everyone: <https://bugs.telegram.org/c/13017>
+
+---
+
 Telegram seems to limit who can see the new ["Filter New Chats from Non-Contacts"](https://telegram.org/blog/profile-videos-people-nearby-and-more#filter-new-chats-from-non-contacts) setting to people who have already received a lot of spam. How availability is determined is unknown to me. Thankfully, this option is available through the Telegram Client API, so it's still possible to enable it before that happens.
 
 This is a brief write-up and I won't go into the details of each step. You're expected to know how to use the command line of your preferred OS.
