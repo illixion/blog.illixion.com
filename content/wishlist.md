@@ -51,9 +51,11 @@ author = "Manual"
 
 ||Item|Price|Availability|
 |---|---|---|---|
-|![Elgato Stream Deck](/post_files/wishlist/streamdeck.jpg)|[Elgato Stream Deck](https://www.amazon.de/-/en/Corsair-Elgato-Stream-Deck-Buttons/dp/B06W2KLM3S)|~150EUR|<a href="#" onclick="checkItem('Elgato Stream Deck')">Check availability</a>|
+|![Oculus Quest 2](/post_files/wishlist/oculus-quest-2.jpg)|[Oculus Quest 2](https://www.euronics.lv/izklaide/spelu-aksesuari/virtuala-realitate/815820022732/virtualas-realitates-brilles-oculus-quest-2-128-gb)|~420EUR|<a href="#" onclick="checkItem('Oculus Quest 2')">Check availability</a>|
 |![FiiO BTR5-2021](/post_files/wishlist/fiiobtr5.jpg)|[FiiO BTR5-2021](https://www.amazon.com/FiiO-BTR5-2021-Receiver-Bluetooth-Headphone/dp/B09G9TNB2R/)|~120EUR|<a href="#" onclick="checkItem('FiiO BTR5-2021')">Check availability</a>|
 |![Flair Neo](/post_files/wishlist/flairneo.jpg)|[Flair Neo](https://www.gemoss.lv/shop/lv/riks-kafijas-pagatavosanai-flair-neo-peleks-647213148046)|~100EUR|<a href="#" onclick="checkItem('Flair Neo')">Check availability</a>|
 |![Teenage Engineering PO-33 K.O!](/post_files/wishlist/te-po-33.jpg)|[Teenage Engineering PO-33 K.O!](https://soundium.lv/teenage-engineering-po-33-k-o)|99EUR|<a href="#" onclick="checkItem('Teenage Engineering PO-33 K.O!')">Check availability</a>|
+|![Microwave](/post_files/wishlist/microwave.jpg)|Microwave|~50EUR|<a href="#" onclick="checkItem('Microwave')">Check availability</a>|
+|![Logitech G305](/post_files/wishlist/g305.png)|[Logitech G305](https://www.euronics.lv/ru/it/dopolnitel-nye-ustrojstva/myshi/910-005283/besprovodnaja-mysh-logitech-g305)|~45EUR|<a href="#" onclick="checkItem('Logitech G305')">Check availability</a>|
 |![Microwave](/post_files/wishlist/microwave.jpg)|Microwave|~50EUR|<a href="#" onclick="checkItem('Microwave')">Check availability</a>|
 |![Selfie Ring Light](/post_files/wishlist/ring%20light.jpg)|[Selfie Ring Light](https://www.aliexpress.com/item/4001079355903.html)<br>(26cm light arm stand option)|~27EUR|<a href="#" onclick="checkItem('Selfie Ring Light')">Check availability</a>|
