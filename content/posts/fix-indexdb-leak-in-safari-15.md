@@ -23,7 +23,7 @@ As a workaround, I wrote a userscript that will overwrite the `indexedDB.databas
 
 Afterwards, launch the app and choose a path to a folder where you'll be storing your userscripts (I recommend creating a folder in iCloud). Once that's done, download the userscript and put it into the folder you've created. You'll also need to enable the Userscripts extension in Safari settings.
 
-**Link to download the userscript**: <a href="/post_files/fix-indexdb-leak-in-safari-15/fix_indexdb_leak_safari15.js" download>Download</a>
+**Link to download the userscript**: <a href="/post_files/fix-indexdb-leak-in-safari-15/fix_indexdb_leak_safari15.user.js" download>Download</a>
 
 You can check if the userscript worked by using this website: <https://safarileaks.com>
 
