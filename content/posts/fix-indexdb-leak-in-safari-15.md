@@ -13,6 +13,8 @@ categories:
 
 ## Preface
 
+**Update**: iOS 15.2.1 does NOT fix this issue, and as such, this workaround is still the only way to protect yourself against personal data leaking to every website you vitit.
+
 There's been a shocking disclosure made by fingerprintJS that revealed a critical bug in Safari 15's `indexedDB` implementation: it breaks the Same-Origin policy by revealing databases belonging to other websites. This allows any website to uniquely identify you, as well as reveal identifying information like your Google account IDs. You can read more on fingerprintJS's blog: <https://fingerprintjs.com/blog/indexeddb-api-browser-vulnerability-safari-15/>
 
 ## Solution
