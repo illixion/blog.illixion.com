@@ -9,7 +9,11 @@ tags:
 - safari
 categories:
 - general
+images:
+- /post_files/fix-indexdb-leak-in-safari-15/Safari-icon.png
 ---
+
+![Safari icon](/post_files/fix-indexdb-leak-in-safari-15/Safari-icon.png)
 
 ## Preface
 
@@ -32,3 +36,5 @@ You can check if the userscript worked by using this website: <https://safarilea
 ---
 
 I hope that this article helped you, and please let me know your thoughts in the comment section below. I hope that Apple will provide a fix for this bug soon as it's quite severe.
+
+<small>Safari icon by [fasticon.com](http://www.fasticon.com/)</small>
