@@ -7,6 +7,8 @@ tags:
 - dropbox
 categories:
 - general
+images:
+- /post_files/dropbox-support-hell/db-6-digit-code.png
 ---
 
 ## Context
