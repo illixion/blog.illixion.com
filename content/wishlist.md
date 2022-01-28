@@ -57,5 +57,4 @@ author = "Manual"
 |![Teenage Engineering PO-33 K.O!](/post_files/wishlist/te-po-33.jpg)|[Teenage Engineering PO-33 K.O!](https://soundium.lv/teenage-engineering-po-33-k-o)|99EUR|<a href="#" onclick="checkItem('Teenage Engineering PO-33 K.O!')">Check availability</a>|
 |![Microwave](/post_files/wishlist/microwave.jpg)|Microwave|~50EUR|<a href="#" onclick="checkItem('Microwave')">Check availability</a>|
 |![Logitech G305](/post_files/wishlist/g305.png)|[Logitech G305](https://www.euronics.lv/ru/it/dopolnitel-nye-ustrojstva/myshi/910-005283/besprovodnaja-mysh-logitech-g305)|~45EUR|<a href="#" onclick="checkItem('Logitech G305')">Check availability</a>|
-|![Microwave](/post_files/wishlist/microwave.jpg)|Microwave|~50EUR|<a href="#" onclick="checkItem('Microwave')">Check availability</a>|
 |![Selfie Ring Light](/post_files/wishlist/ring%20light.jpg)|[Selfie Ring Light](https://www.aliexpress.com/item/4001079355903.html)<br>(26cm light arm stand option)|~27EUR|<a href="#" onclick="checkItem('Selfie Ring Light')">Check availability</a>|
