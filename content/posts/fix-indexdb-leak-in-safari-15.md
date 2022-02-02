@@ -17,7 +17,7 @@ images:
 
 ## Preface
 
-**Update**: iOS 15.2.1 does NOT fix this issue, and as such, this workaround is still the only way to fix this.
+**Update**: iOS 15.3 and macOS 12.2 have fixed this issue, so if you're up to date then you don't need this workaround.
 
 There's been a shocking disclosure made by fingerprintJS that revealed a critical bug in Safari 15's `indexedDB` implementation: it breaks the Same-Origin policy by revealing databases belonging to other websites. This allows any website to uniquely identify you, as well as reveal identifying information like your Google account IDs. You can read more on fingerprintJS's blog: <https://fingerprintjs.com/blog/indexeddb-api-browser-vulnerability-safari-15/>
 
