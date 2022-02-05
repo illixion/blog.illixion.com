@@ -51,7 +51,6 @@ author = "Manual"
 
 ||Item|Price|Availability|
 |---|---|---|---|
-|![Oculus Quest 2](/post_files/wishlist/oculus-quest-2.jpg)|[Oculus Quest 2](https://www.euronics.lv/izklaide/spelu-aksesuari/virtuala-realitate/815820022732/virtualas-realitates-brilles-oculus-quest-2-128-gb)|~420EUR|<a href="#" onclick="checkItem('Oculus Quest 2')">Check availability</a>|
 |![FiiO BTR5-2021](/post_files/wishlist/fiiobtr5.jpg)|[FiiO BTR5-2021](https://www.amazon.com/FiiO-BTR5-2021-Receiver-Bluetooth-Headphone/dp/B09G9TNB2R/)|~120EUR|<a href="#" onclick="checkItem('FiiO BTR5-2021')">Check availability</a>|
 |![Flair Neo](/post_files/wishlist/flairneo.jpg)|[Flair Neo](https://www.gemoss.lv/shop/lv/riks-kafijas-pagatavosanai-flair-neo-peleks-647213148046)|~100EUR|<a href="#" onclick="checkItem('Flair Neo')">Check availability</a>|
 |![Teenage Engineering PO-33 K.O!](/post_files/wishlist/te-po-33.jpg)|[Teenage Engineering PO-33 K.O!](https://soundium.lv/teenage-engineering-po-33-k-o)|99EUR|<a href="#" onclick="checkItem('Teenage Engineering PO-33 K.O!')">Check availability</a>|
