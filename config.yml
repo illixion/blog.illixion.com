@@ -1,4 +1,4 @@
-baseURL: https://catto.io/
+baseURL: https://blog.illixion.com/
 theme: pure
 title: Manual
 defaultContentLanguage: en
@@ -154,7 +154,7 @@ params:
       pageSize: 10 # pagination size
       visitor: false # Article reading statistic https://valine.js.org/visitor.html
     utterances:
-      repo: manualmanul/catto.io
+      repo: manualmanul/blog.illixion.com
       issueterm: pathname
       label: comment
       theme: preferred-color-scheme
