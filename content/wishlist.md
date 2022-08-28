@@ -5,7 +5,7 @@ author = "Manual"
 +++
 
 <script>
-    fetch("https://wishlist-tracker.catto.workers.dev")
+    fetch("https://wishlist-tracker.illixion.workers.dev")
     .then(res => res.json())
     .then(data => window.reservationList = data)
 
@@ -13,7 +13,7 @@ author = "Manual"
         if (!(name in window.reservationList)) {
             window.reservationList[name] = {}
             window.reservationList[name]["value"] = false
-            fetch("https://wishlist-tracker.catto.workers.dev/?item=force_refresh")
+            fetch("https://wishlist-tracker.illixion.workers.dev/?item=force_refresh")
             .then(res => res.json())
             .then(data => window.reservationList = data)
         }
@@ -26,7 +26,7 @@ author = "Manual"
             contactInfo = "< No contact info provided >"
         }
         if (contactInfo !== null) {
-            fetch(`https://wishlist-tracker.catto.workers.dev/?item=${name}&contact=${contactInfo}&reserve`)
+            fetch(`https://wishlist-tracker.illixion.workers.dev/?item=${name}&contact=${contactInfo}&reserve`)
             .then(res => {
                 if (res.status === 200) {
                     alert("You've successfully reserved this item!")
@@ -54,4 +54,3 @@ author = "Manual"
 |![FiiO BTR5-2021](/post_files/wishlist/fiiobtr5.jpg)|[FiiO BTR5-2021](https://www.amazon.com/FiiO-BTR5-2021-Receiver-Bluetooth-Headphone/dp/B09G9TNB2R/)|~120EUR|<a href="#" onclick="checkItem('FiiO BTR5-2021')">Check availability</a>|
 |![Flair Neo](/post_files/wishlist/flairneo.jpg)|[Flair Neo](https://www.gemoss.lv/shop/lv/riks-kafijas-pagatavosanai-flair-neo-peleks-647213148046)|~100EUR|<a href="#" onclick="checkItem('Flair Neo')">Check availability</a>|
 |![Teenage Engineering PO-33 K.O!](/post_files/wishlist/te-po-33.jpg)|[Teenage Engineering PO-33 K.O!](https://soundium.lv/teenage-engineering-po-33-k-o)|99EUR|<a href="#" onclick="checkItem('Teenage Engineering PO-33 K.O!')">Check availability</a>|
-|![Logitech G305](/post_files/wishlist/g305.png)|[Logitech G305](https://www.euronics.lv/ru/it/dopolnitel-nye-ustrojstva/myshi/910-005283/besprovodnaja-mysh-logitech-g305)|~45EUR|<a href="#" onclick="checkItem('Logitech G305')">Check availability</a>|
