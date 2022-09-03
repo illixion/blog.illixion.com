@@ -1,6 +1,6 @@
 baseURL: https://blog.illixion.com/
 theme: pure
-title: Manual
+title: "Ixion's blog"
 defaultContentLanguage: en
 canonifyURLs: false
 footnoteReturnLinkContents: ↩
@@ -105,13 +105,13 @@ params:
     author_title: 
     author_description: 
     location: Riga, Latvia
-    follow: https://github.com/manualmanul
+    follow: https://github.com/illixion
     # Social Links
     social:
       links:
         rss: /index.xml
-        github: https://github.com/manualmanul
-        twitter: https://twitter.com/manualmanul
+        github: https://github.com/illixion
+        twitter: https://twitter.com/illixion
         # weibo: http://weibo.com/{yourid}
         # facebook: /
       link_tooltip: true # enable the social link tooltip, options: true, false
@@ -122,7 +122,7 @@ params:
       width: 40
       height: 40
       url: favicon.ico
-    title: Manual
+    title: "Ixion's blog"
     favicon: favicon.ico
     board: "" # 公告牌
 
@@ -154,7 +154,7 @@ params:
       pageSize: 10 # pagination size
       visitor: false # Article reading statistic https://valine.js.org/visitor.html
     utterances:
-      repo: manualmanul/blog.illixion.com
+      repo: illixion/blog.illixion.com
       issueterm: pathname
       label: comment
       theme: preferred-color-scheme
