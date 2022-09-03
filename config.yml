@@ -1,6 +1,6 @@
 baseURL: https://blog.illixion.com/
 theme: pure
-title: Manual
+title: "Ixion's blog"
 defaultContentLanguage: en
 canonifyURLs: false
 footnoteReturnLinkContents: ↩
@@ -122,7 +122,7 @@ params:
       width: 40
       height: 40
       url: favicon.ico
-    title: Manual
+    title: "Ixion's blog"
     favicon: favicon.ico
     board: "" # 公告牌
 
