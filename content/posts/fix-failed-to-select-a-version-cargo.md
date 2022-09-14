@@ -1,5 +1,5 @@
 ---
-author: Manual
+author: Ixion
 title: How to fix "failed to select a version for the requirement" in Rust's Cargo
 date: "2021-10-21"
 summary: Local registry cache corruption can cause issues where Cargo won't be able to find new versions of packages. Here's the solution.
