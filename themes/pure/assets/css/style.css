@@ -9434,7 +9434,7 @@ body.okayNav-loaded {
   background-color: #fffae6;
 }
 
-/* Dark mode test */
+/* Dark mode */
 :root {
   --main-bg-color: #121212;
   --main-text-color: #eee;
@@ -9597,6 +9597,10 @@ body.okayNav-loaded {
 
   .text-muted {
     color: rgb(182, 182, 182) !important;
+  }
+
+  .okayNav a {
+    color: var(--main-link-color);
   }
 
   /* search */
