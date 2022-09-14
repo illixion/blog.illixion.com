@@ -1,5 +1,5 @@
 ---
-author: Manual
+author: Ixion
 title: Hackintosh setup notes for ASUS H110M, Intel i5-8500 and UHD 630
 date: "2019-10-18"
 summary: Hackintosh build guide for a PC with ASUS H110M, Intel i5-8500 and UHD 630.

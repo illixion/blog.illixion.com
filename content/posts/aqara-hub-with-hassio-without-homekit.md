@@ -1,5 +1,5 @@
 ---
-author: Manual
+author: Ixion
 title: Xiaomi Aqara Hub in Home Assistant, without HomeKit
 date: "2020-06-23"
 summary: Guide to rooting lumi.gateway.aqhm01 and making it work with Home Assistant without resorting to HomeKit.

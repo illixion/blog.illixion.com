@@ -99,19 +99,20 @@ params:
   # profile
   profile:
     enabled: true # Whether to show profile bar
-    avatar: manual.png
+    avatar: ixion.png
     gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-    author: Manual
+    author: Ixion
     author_title: 
     author_description: 
     location: Riga, Latvia
-    follow: https://github.com/illixion
+    follow: https://illixion.com
     # Social Links
     social:
       links:
         rss: /index.xml
-        github: https://github.com/illixion
-        twitter: https://twitter.com/illixion
+        profile: https://illixion.com
+        # github: https://github.com/illixion
+        # twitter: https://twitter.com/illixion
         # weibo: http://weibo.com/{yourid}
         # facebook: /
       link_tooltip: true # enable the social link tooltip, options: true, false

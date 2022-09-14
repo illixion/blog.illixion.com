@@ -1,7 +1,7 @@
 +++
 title = "My wishlist"
-description = "Manual's wishlist"
-author = "Manual"
+description = "Ixion's wishlist"
+author = "Ixion"
 +++
 
 <script>
