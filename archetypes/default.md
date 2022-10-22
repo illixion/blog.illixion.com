@@ -1,6 +1,13 @@
 ---
+author: "{{ .Site.Author.name }}"
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+summary: 
+tags: 
+- 
+categories:
+- general
+- tipsandtricks
+- tutorials
 ---
 
