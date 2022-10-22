@@ -13,6 +13,6 @@ Have you just encountered the following error while trying to download a Windows
 
 > We are unable to complete your request at this time.Some users, entities and locations are banned from using this service. For this reason, leveraging anonymous or location hiding technologies when connecting to this service is not generally allowed. If you believe that you encountered this problem in error, please try again. If the problem persists you may contact Microsoft Support – Contact Us page for assistance. Refer to message code 715-123130 and ...
 
-After (unsuccessfully) trying to sovle this with Microsoft online chat over the course of 3 different chat sessions, I've finally figured out that the problem was related to the browser I was using. Specifically, I was using Safari on macOS Monterey, and the error went away after switching to Firefox. Chromium-based browsers may work too, but I haven't checked.
+After (unsuccessfully) trying to solve this with Microsoft online chat over the course of 3 different chat sessions, I've finally figured out that the problem was related to the browser I was using. Specifically, I was using Safari on macOS Monterey, and the error went away after switching to Firefox. Chromium-based browsers may work too, but I haven't checked.
 
 Hope this helps!
