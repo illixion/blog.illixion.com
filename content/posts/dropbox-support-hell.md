@@ -89,9 +89,9 @@ One week later.
 > Kylie
 
 
-Finally, we're getting somewhere! Ignoring that this is an obvious template which is asking me to do something I that I've said I can't do (use a logged-in device), I submit the necessary info for a manual authentication. Maybe, just maybe, this will be the end of this whole issue.
+Finally, we're getting somewhere! Ignoring that this is an obvious template which is asking me to do something that I've said I can't do (use a logged-in device), I submit the necessary info for a manual authentication. Maybe, just maybe, this will be the end of this whole issue.
 
-**Another week passes.** I receive an email that my ticket is once again being transferred to someone else. Whatever, I just want to get this over with.
+**Another week passes.** I receive an email stating that my ticket is being transferred to someone else. Whatever, I just want to get this over with.
 
 A few hours later:
 
@@ -443,7 +443,7 @@ Another day passes, and Nina finally confirms my worst fear – Dropbox exclusiv
 
 ## Part 4 — Despair
 
-At this point, I'm looking for any way to keep this ticket going. I see the following sentence: *If your password was expired by Dropbox for the security of your account, Dropbox support can assist.*
+At this point, I'm looking for any way to keep this ticket going. I notice the following sentence: *If your password was expired by Dropbox for the security of your account, Dropbox support can assist.*
 
 I point this out to Nina:
 
@@ -520,17 +520,17 @@ TL;DR I'm once again asked to send screenshots of what I'm experiencing.
 > 
 > Could you please escalate this? I’m certain that there’s a technical issue that’s preventing you from helping me with logging in, because why else would I be getting an invalid password error when I enter the correct password?
 
-Nina comes back and asks me to click the "I can't recover my account using this page" link that shows up when you press the "Click here to reset it" link. This link goes to a knowledge base article on Dropbox's website. Just to make sure that you understand: Nina, the Dropbox support agent, doesn't know that this link doesn't actually do anything.
+Nina comes back and asks me to click the "I can't recover my account using this page" link that shows up when you press the "Click here to reset it" link. This link goes to a knowledge base article on Dropbox's website.
 
 I send a screenshot of the knowledge base article in a reply. I expect nothing. I ask myself – why am I even doing this anyway?
 
-Perhaps there's some deeper meaning to me weaving through the 7 layers of customer support hell, finding solutions to being stonewalled, and perseverance. I'm too tired to look for it though. I just wanted to re-experience my Minecraft worlds one final time.
+Perhaps there's some deeper meaning to me weaving through the 7 layers of customer support hell, finding solutions to being stonewalled, and perseverance. I'm too tired to look for it though. I just wanted to re-experience my bootleg Minecraft worlds one final time.
 
-## Part 4 - The End
+## Part 5 - The End
 
 (updated on 03/12/2021)
 
-After posting this article to the forum thread mentioned above (and subsequently it being deleted, thanks mods), my ticket finally got escalated to someone who is an "account security manager" at Dropbox, and after verifying my identity, they helped me with resetting the password. It's unfortunate that this is what I had to do through to get actual help, but it's something, I guess.
+After posting this article to the forum thread mentioned above (and my comment subsequently being deleted, thanks mods!), my ticket finally got escalated to someone who is an "account security manager" at Dropbox, and after verifying my identity, they helped me with resetting the password. It's unfortunate that this is what I had to do through to get actual help, but it's something, I guess.
 
 The point I've made before still stands though, and it's that **you should stop using Dropbox.** They don't care about you or your files, all they want is your money. Move to any other service like Google Drive, or a self-hosted solution like Nextcloud. There are many alternatives to Dropbox, and they're all better at preserving your files than Dropbox.
 
