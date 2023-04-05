@@ -729,7 +729,7 @@ blockquote footer,
 blockquote small,
 blockquote .small {
   display: block;
-  font-size: 80%;
+  font-size: 90%;
   line-height: 1.57143;
   color: #777777;
 }
@@ -737,7 +737,8 @@ blockquote .small {
 blockquote footer:before,
 blockquote small:before,
 blockquote .small:before {
-  content: '\2014 \00A0';
+  content: '\24D8';
+  padding-right: 0.5em;
 }
 
 .blockquote-reverse,
@@ -9610,5 +9611,12 @@ body.okayNav-loaded {
 
   .ins-section .ins-section-header, .ins-search-input {
     border-bottom: 1px solid #555;
+  }
+
+  /* small */
+  blockquote footer,
+  blockquote small,
+  blockquote .small {
+    color: #ccc;
   }
 }

@@ -8,6 +8,11 @@
     <li class="post-copyright-license">
       <strong>{{ T "copyright_license" }}：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed" target="_blank" rel="external">CC BY 4.0</a>
     </li>
+    {{- if .Params.copyright_notice }}
+    <li class="post-copyright-notice">
+      <small>{{- .Params.copyright_notice }}</small>
+    </li>
+    {{- end }}
   </ul>
 </blockquote>
 {{ $profile := .Site.Params.profile }}
