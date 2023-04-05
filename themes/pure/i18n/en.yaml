@@ -94,7 +94,7 @@ article_comments:
 article_share:
   other: Share
 article_catalogue:
-  other: Catalogue
+  other: Table of Contents
 
 total_article:
   other: Total {{ .Count }} articles
