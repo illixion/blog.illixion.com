@@ -118,8 +118,8 @@ Run the following command to install `socket_vmnet`. A pin command is also inclu
 Due to Lima's limitations, you'll need to find the full locations of `socket_vmnet` and `vde_switch` binaries instead of using homebrew symlinks. To get their locations, run the following commands in your terminal:
 
 ```bash
-❯ readlink -f /opt/homebrew/bin/socket_vmnet
-❯ readlink -f /opt/homebrew/bin/vde_switch
+❯ readlink -f $(brew --prefix)/bin/socket_vmnet
+❯ readlink -f $(brew --prefix)/bin/vde_switch
 ```
 
 Afterwards, using your favorite text editor, open the file `~/.lima/_config/networks.yaml` and update the `paths` section to use the paths from the previous step. For example:
@@ -171,7 +171,7 @@ Now that we have Home Assistant installed on Docker, we can access its web inter
 
 Follow the on-screen instructions to create an account, name your home, choose your location and units, and discover your devices. You can also customize your dashboard, add integrations, create automations, and more.
 
-Note that discovery will still not work at this stage, you need to go to Settings → System → Network and change the network interface under "Network Adapter". Uncheck "Auto Configure" and select the correct interface, it should be called `lima0` and use the IP address of the Home Assistant instance. This is what it should look like:
+Note that discovery will still not work at this stage, you will first need to enable ["advanced mode"](https://www.home-assistant.io/blog/2019/07/17/release-96/#advanced-mode) in your Home Assistant profile page, then go to Settings → System → Network and change the network interface under "Network Adapter". Uncheck "Auto Configure" and select the correct interface, it should be called `lima0` and use the IP address of the Home Assistant instance. This is what it should look like:
 
 ![Home Assistant network settings](/post_files/colima-home-assistant/hassio_network.png)
 
