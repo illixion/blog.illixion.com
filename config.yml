@@ -126,6 +126,8 @@ params:
     title: "Ixion's blog"
     favicon: favicon.ico
     board: "" # 公告牌
+  # Edit button
+  github_repo: "https://github.com/illixion/blog.illixion.com"
 
   # Share
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
