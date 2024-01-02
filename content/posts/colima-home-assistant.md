@@ -106,28 +106,28 @@ This is a necessary step to ensure that Home Assistant is able to discover your 
 
 ### Install socket_vmnet
 
-Run the following command to install `socket_vmnet`. A pin command is also included as we'll be relying on this package not being auto-updated.
+Run the following commands to install `socket_vmnet`. A pin command is also included as we'll be relying on this package not being auto-updated.
 
 ```bash
 ❯ brew install socket_vmnet
 ❯ brew pin socket_vmnet
+❯ limactl sudoers > /private/etc/sudoers.d/lima
+❯ sudo brew services restart socket_vmnet
 ```
 
 ### Configure Lima to use socket_vmnet
 
-Due to Lima's limitations, you'll need to find the full locations of `socket_vmnet` and `vde_switch` binaries instead of using homebrew symlinks. To get their locations, run the following commands in your terminal:
+Due to Lima's limitations, you'll need to find the full locations of `socket_vmnet` and `vde_switch` binaries instead of using homebrew symlinks. To get their locations, run the following command in your terminal:
 
 ```bash
-❯ readlink -f $(brew --prefix)/bin/socket_vmnet
-❯ readlink -f $(brew --prefix)/bin/vde_switch
+❯ readlink -f $(brew --prefix)/opt/socket_vmnet/bin/socket_vmnet
 ```
 
 Afterwards, using your favorite text editor, open the file `~/.lima/_config/networks.yaml` and update the `paths` section to use the paths from the previous step. For example:
 
 ```yaml
 paths:
-  socketVMNet: /opt/homebrew/Cellar/socket_vmnet/1.1.2/bin/socket_vmnet
-  vdeSwitch: /opt/homebrew/Cellar/vde/2.3.3/bin/vde_switch
+  socketVMNet: /opt/homebrew/Cellar/socket_vmnet/1.1.3/bin/socket_vmnet
 ```
 
 We'll also need to modify `~/.lima/_config/override.yaml` to get Lima to use bridged mode. To do this, create `~/.lima/_config/override.yaml` and add the following lines:
@@ -136,6 +136,8 @@ We'll also need to modify `~/.lima/_config/override.yaml` to get Lima to use bri
 networks:
   - lima: bridged
 ```
+
+Afterwards, restart Lima by running `colima restart`.
 
 ## Step 5: Install Home Assistant on Docker
 
