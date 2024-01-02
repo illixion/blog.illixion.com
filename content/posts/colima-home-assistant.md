@@ -12,6 +12,8 @@ categories:
 - tutorials
 ---
 
+> Please note that this article uses an old version of colima due to a major networking refactor done in 0.6.0, so you may be missing important updates. The article will be updated as soon as a new way to define bridged networks has been found.
+
 ## Preface
 
 Home Assistant is a popular open-source platform for home automation that allows you to control and monitor your smart devices from a single interface. It can run on various platforms, including macOS, but it requires a container runtime such as Docker to work properly.
@@ -28,10 +30,12 @@ In this post, I'll demonstrate how to set up Home Assistant on macOS using Colim
 
 The first step is to install Colima and Docker on your macOS machine. You can do this easily with Homebrew, which is a package manager for macOS. If you don't have Homebrew installed, you can follow the instructions here: [brew.sh](https://brew.sh/)
 
-Once you have Homebrew installed, you can run the following command in your terminal:
+Once you have Homebrew installed, you can run the following commands in your terminal:
 
 ```bash
-❯ brew install colima docker docker-compose
+wget -O /usr/local/bin/colima https://github.com/abiosoft/colima/releases/download/v0.5.6/colima-Darwin-arm64
+chmod +x /usr/local/bin/colima
+brew install docker docker-compose
 ```
 
 This will install Colima and Docker along with their dependencies.
@@ -47,7 +51,7 @@ Once your text editor opens (nano by default, but if it isn't, you can run `expo
 ```yaml
 network:
   driver: slirp
-mountType: 9p  # not strictly necessary, but works much better than sshfs
+mountType: 9p
 provision:
   # this ensures that your local network is always the next-hop, which is required for discovery to work
   - mode: system
@@ -109,18 +113,18 @@ This is a necessary step to ensure that Home Assistant is able to discover your 
 Run the following commands to install `socket_vmnet`. A pin command is also included as we'll be relying on this package not being auto-updated.
 
 ```bash
-❯ brew install socket_vmnet
-❯ brew pin socket_vmnet
-❯ limactl sudoers > /private/etc/sudoers.d/lima
-❯ sudo brew services restart socket_vmnet
+brew install socket_vmnet
+brew pin socket_vmnet
+limactl sudoers | sudo tee /private/etc/sudoers.d/lima > /dev/null
+sudo brew services restart socket_vmnet
 ```
 
 ### Configure Lima to use socket_vmnet
 
-Due to Lima's limitations, you'll need to find the full locations of `socket_vmnet` and `vde_switch` binaries instead of using homebrew symlinks. To get their locations, run the following command in your terminal:
+Due to Lima's limitations, you'll need to find the full locations of `socket_vmnet` binary instead of using homebrew symlinks. To get their locations, run the following command in your terminal:
 
 ```bash
-❯ readlink -f $(brew --prefix)/opt/socket_vmnet/bin/socket_vmnet
+readlink -f $(brew --prefix)/opt/socket_vmnet/bin/socket_vmnet
 ```
 
 Afterwards, using your favorite text editor, open the file `~/.lima/_config/networks.yaml` and update the `paths` section to use the paths from the previous step. For example:
@@ -162,7 +166,7 @@ services:
 Afterwards, `cd` to the folder you've created and run the following command in your terminal:
 
 ```bash
-❯ docker-compose up -d
+docker-compose up -d
 ```
 
 ### Step 6: Set up Home Assistant
