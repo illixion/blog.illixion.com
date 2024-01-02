@@ -1,3 +1,9 @@
+{{- $github_repo := .Site.Params.github_repo }}
+{{- $branch := "main" }}
+{{- $content_dir := "content" }}
+{{- $file_path := .File.Path }}
+{{- $edit_url := printf "%s/edit/%s/%s/%s" $github_repo $branch $content_dir $file_path }}
+
 <nav class="bar bar-footer clearfix" data-stick-bottom>
     <div class="bar-inner">
         {{- if (or (.Prev) (.Next)) }}
@@ -19,14 +25,21 @@
             {{ with .Site.Params.config.toc }}
             <li class="toggle-toc">
                 <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
-                    title="{{ T "article_catalogue" }}" role="button">
-                    <span>[&nbsp;</span><span>{{ T "article_catalogue" }}</span>
+                    title='{{ T "article_catalogue" }}' role="button">
+                    <span>[&nbsp;</span>
                     <i class="text-collapsed icon icon-anchor"></i>
+                    <span>{{ T "article_catalogue" }}</span>
                     <i class="text-in icon icon-close"></i>
                     <span>]</span>
                 </a>
             </li>
             {{- end }}
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" href="{{- $edit_url }}" class="btn">
+                    <i class="text-collapsed icon icon-github-fill"></i>
+                    <span>Edit...</span>
+                </a>
+            </li>
         </ul>
         {{- end }}
         {{- $donate := .Site.Params.donate}}
