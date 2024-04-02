@@ -62,12 +62,17 @@ menu:
       url: /tags/
       weight: 4
 
+    - identifier: pgp
+      name: PGP
+      title: PGP
+      url: /pgp/
+      weight: 5
+
     - identifier: about
       name: About
       title: About
-      url: /about/
-      weight: 5
-      
+      url: https://illixion.com
+      weight: 6
 
 params:
   since: "2020"
@@ -95,6 +100,7 @@ params:
     books: icon-book-fill
     links: icon-friendship
     about: icon-cup-fill
+    pgp: icon-plus
 
   # profile
   profile:
