@@ -2,3 +2,4 @@ resources/_gen/*
 _drafts/*
 .DS_Store
 .hugo_build.lock
+public/
