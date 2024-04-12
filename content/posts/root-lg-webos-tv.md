@@ -18,10 +18,10 @@ Rooting your LG webOS TV can unlock a host of new features and capabilities, all
 - A computer with Python 3 installed (https://www.python.org/downloads/).
 - The LG TV should be connected to the same local network as your computer.
 - Make sure your TV's webOS version is supported by the script. The most recent supported versions are:
-  - **webOS 4.9.7 - 5.30.40** running on **LG43UM7000PLA**
-  - **webOS 5.5.0 - 04.50.51** running on **OLED55CXPUA**
-  - **webOS 6.3.3-442 (kisscurl-kinglake) - 03.36.50** running on **OLED48C1PUB**
-  - **webOS 7.3.1-43 (mullet-mebin) - 03.33.85** running on **OLED55A23LA**
+  - **webOS 4.9.7 - 5.30.40** (tested on **LG43UM7000PLA**)
+  - **webOS 5.5.0 - 04.50.51** (tested on **OLED55CXPUA**)
+  - **webOS 6.3.3-442 (kisscurl-kinglake) - 03.36.50** (tested on **OLED48C1PUB**)
+  - **webOS 7.3.1-43 (mullet-mebin) - 03.33.85** (tested on **OLED55A23LA**)
 
 ## Step 1: Download the Script
 
@@ -59,4 +59,4 @@ To further enhance your rooted TV, consider installing the Homebrew Channel. Vis
 
 **Disclaimer:** Rooting your TV can be risky and may void your warranty or even brick the TV if you modify any system files. This guide is provided for educational purposes only, and the author is not responsible for any damage that may occur.
 
-Happy rooting, and enjoy exploring the new possibilities of your LG webOS TV!
+Happy rooting, and enjoy exploring the new possibilities of your LG webOS TV! If you encounter any issues or errors, feel free to leave a comment.
