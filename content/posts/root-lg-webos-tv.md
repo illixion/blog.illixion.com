@@ -22,6 +22,7 @@ Rooting your LG webOS TV can unlock a host of new features and capabilities, all
   - **webOS 5.5.0 - 04.50.51** (tested on **OLED55CXPUA**)
   - **webOS 6.3.3-442 (kisscurl-kinglake) - 03.36.50** (tested on **OLED48C1PUB**)
   - **webOS 7.3.1-43 (mullet-mebin) - 03.33.85** (tested on **OLED55A23LA**)
+- To verify your full webOS version, press the Mute button on your remote 5 times while on any HDMI input.
 
 ## Step 1: Download the Script
 
