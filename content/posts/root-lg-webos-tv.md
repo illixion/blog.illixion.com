@@ -59,6 +59,13 @@ If successful, the script will return a success message along with the telnet IP
 
 To further enhance your rooted TV, consider installing the Homebrew Channel. Visit <https://github.com/webosbrew/webos-homebrew-channel?tab=readme-ov-file#installation> for instructions on how to install it. This will allow you to install apps such as an ad-free version of YouTube or ambient lighting software that will work system-wide.
 
+Note that if you've never used the developer mode on your TV before, you'll need to enable it to be able to install apps. This can be done by executing the following commands:
+
+```sh
+rm -rf /var/luna/preferences/devmode_enabled && mkdir -p /var/luna/preferences/devmode_enabled
+restart appinstalld
+```
+
 **Disclaimer:** Rooting your TV can be risky and may void your warranty or even brick the TV if you modify any system files. This guide is provided for educational purposes only, and the author is not responsible for any damage that may occur.
 
 Happy rooting, and enjoy exploring the new possibilities of your LG webOS TV! If you encounter any issues or errors, feel free to leave a comment.
