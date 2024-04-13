@@ -9,7 +9,7 @@ categories:
 - tipsandtricks
 ---
 
-I've recently made a web app for my LG OLED TV, and I've encountered an issue where the TV would constantly be showing the fireworks screensaver every 2 minutes or so, even while the app was playing video. After spending hours researching this, I've finally discovered the solution, and it ended up being as simple as using an undocumented (AFAIK) API endpoint.
+I've recently made a web app for my LG OLED TV, and I've encountered an issue where the TV would constantly be showing the fireworks screensaver every 2 minutes or so, even while the app was playing video. After spending hours searching for a solution, I've finally discovered [this comment](https://github.com/webosbrew/apps-repo/issues/60#issuecomment-1133907357) by [@Mariotaku](https://github.com/mariotaku) on a GitHub PR, and it ended up being as simple as using an undocumented API endpoint.
 
 # Web apps
 
