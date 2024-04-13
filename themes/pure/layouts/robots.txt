@@ -1,2 +1,4 @@
+Sitemap: https://blog.illixion.com/sitemap.xml
+
 User-agent: *
 Allow: /
