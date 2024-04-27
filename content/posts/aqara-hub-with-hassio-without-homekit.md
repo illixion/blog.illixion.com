@@ -58,7 +58,7 @@ Once it's on the hub, you can SSH into it and run `chmod +x miio_client; killall
 
 You'll also need to install a custom addon into Home Assistant, which you can get from [this link](https://github.com/cadavre/miio_gateway). To do that, clone the repository into a separate folder in `/config/custom_components`, for example by issuing the following commands through the *Terminal and SSH* plugin for Home Assistant:
 
-```shell
+```sh
 cd custom_components
 git clone git@github.com:cadavre/miio_gateway.git ./miio_gateway
 ```
@@ -105,7 +105,7 @@ Once you've added all of the sensors, restart Home Assistant and you're done!
 
 In some cases, you may not be able to discover some accessories this way, in which case you can SSH into the hub and run the following command:
 
-```shell
+```sh
 killall miio_client; ./miio_client &
 ```
 
