@@ -42,37 +42,43 @@ menu:
       name: Home
       title: Home
       url: /
-      weight: 1
+      weight: 10
 
     - identifier: archives
       name: Archives
       title: Archives
       url: /posts/
-      weight: 2
+      weight: 20
 
     - identifier: categories
       name: Categories
       title: Categories
       url: /categories/
-      weight: 3
+      weight: 30
 
     - identifier: tags
       name: Tags
       title: Tags
       url: /tags/
-      weight: 4
+      weight: 40
+
+    - identifier: sponsor
+      name: Sponsor
+      title: Sponsor
+      url: /sponsor/
+      weight: 50
 
     - identifier: pgp
       name: PGP
       title: PGP
       url: /pgp/
-      weight: 5
+      weight: 60
 
     - identifier: about
       name: About
       title: About
       url: https://illixion.com
-      weight: 6
+      weight: 70
 
 params:
   since: "2020"
@@ -99,6 +105,7 @@ params:
     repository: icon-project
     books: icon-book-fill
     links: icon-friendship
+    sponsor: icon-friendship
     about: icon-cup-fill
     pgp: icon-plus
 
