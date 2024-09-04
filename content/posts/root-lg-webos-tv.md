@@ -27,7 +27,9 @@ To verify your full webOS version, press the Mute button on your remote 5 times 
 
 ## Step 1: Download the Script
 
-Visit the GitHub repository at <https://github.com/illixion/root-my-webos-tv> and download the files `rootmytv.py` and `requirements.txt`.
+Use this link to download everything required as a zip archive: [Download zip](https://github.com/illixion/root-my-webos-tv/archive/refs/heads/main.zip)
+
+Alternatively, you can visit the project's GitHub repository at <https://github.com/illixion/root-my-webos-tv> and download the files `rootmytv.py` and `requirements.txt`.
 
 ## Step 2: Install Required Packages
 
@@ -57,9 +59,9 @@ If successful, the script will return a success message along with the telnet IP
 
 ## Step 6: Install the Homebrew Channel
 
-To further enhance your rooted TV, consider installing the Homebrew Channel. Visit <https://github.com/webosbrew/webos-homebrew-channel?tab=readme-ov-file#installation> for instructions on how to install it. This will allow you to install apps such as an ad-free version of YouTube or ambient lighting software that will work system-wide.
+To further enhance your rooted TV, consider installing the Homebrew Channel. Visit <https://github.com/webosbrew/webos-homebrew-channel?tab=readme-ov-file#installation> for instructions on how to install it. This will allow you to install apps such as an ad-free version of YouTube, custom screensavers or ambient lighting software that works system-wide.
 
-Note that if you've never used the developer mode on your TV before, you'll need to enable it to be able to install apps. This can be done by executing the following commands:
+**Important**: if you've never used the developer mode on your TV before, you'll need to enable it to be able to install apps. This can be done by executing the following commands:
 
 ```sh
 rm -rf /var/luna/preferences/devmode_enabled && mkdir -p /var/luna/preferences/devmode_enabled
