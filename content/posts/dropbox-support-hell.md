@@ -3,8 +3,6 @@ author: Ixion
 title: My Dropbox Horror Story — A Tale of Customer Support Woe
 date: "2021-11-27"
 summary: My experience with losing all of my Dropbox files and being stonewalled by Dropbox Support
-tags:
-- dropbox
 categories:
 - general
 images:
