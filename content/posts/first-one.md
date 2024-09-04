@@ -3,8 +3,6 @@ author: Ixion
 title: First one
 date: "2019-09-01"
 summary: Welcome to my personal World Wide Web internet page! Here's some information about me as of October 2019.
-tags: 
-- introduction
 categories:
 - general
 ---

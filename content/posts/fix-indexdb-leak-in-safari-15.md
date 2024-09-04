@@ -3,14 +3,10 @@ author: Ixion
 title: How to fix the indexedDB leak in Safari 15
 date: "2022-01-16"
 summary: I wrote a quick fix for the Safari 15 data leak as there's no patch for it yet, here's how to apply it.
-tags: 
-- macos
-- ios
-- safari
-categories:
-- general
 images:
 - /post_files/fix-indexdb-leak-in-safari-15/Safari-icon.png
+_build:
+ list: false
 ---
 
 ![Safari icon](/post_files/fix-indexdb-leak-in-safari-15/Safari-icon.png)
