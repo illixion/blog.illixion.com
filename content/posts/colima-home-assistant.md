@@ -159,7 +159,6 @@ services:
       - /Users/user/Docker/homeassistant:/config  # change this to your configuration directory
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
-    privileged: false
     network_mode: host
 ```
 
