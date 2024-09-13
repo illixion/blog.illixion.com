@@ -149,9 +149,7 @@ I let Ash know about this inconvenience.
 > 
 > Regards, Ash
 
-I was duped. I was fooled for the simpleton that I am. Absolutely bamboozled.
-
-Since my password was no longer recognized, I could no longer prove that I'm the account owner, and thus Ash technically couldn't help me anymore. I've sent my response with the speed that even Usain Bolt has never seen, explaining that I'm entering the same credentials as before, and that whatever he did caused it to stop being accepted.
+It's a catch-22! Since my password was no longer recognized, I couldn't prove that I'm the account owner, and thus Ash technically couldn't help me anymore. I respond to this email as soon as I see it, explaining that I'm entering the same credentials as before, and that whatever he did caused it to stop being accepted.
 
 The next few emails will be presented without commentary, so that you can experience the same level of pain that I've experienced:
 
@@ -173,7 +171,7 @@ The next few emails will be presented without commentary, so that you can experi
 > 
 > As mentioned before, I can’t access this email, and Microsoft doesn’t provide any support for @live.com domains anymore. It’s impossible for me to regain access to ...@live.com. I’ve attached my email conversation with Microsoft support from a previous Dropbox support ticket.
 
-> Jul 11, 2921, 5:13 PDT:
+> Jul 11, 2021, 5:13 PDT:
 > 
 > Ash, I just wanted to let you know that your support has been terrible. You’ve locked me out of my account, and now you’re plain ignoring my requests and refusing to do anything to solve this ticket. I’ll make sure to let others know that Dropbox is not a safe place to store files, seeing as it relies on the email as the only means of verifying identity, and the Dropbox support being almost entirely useless in access recovery matters.
 > 
@@ -183,7 +181,7 @@ The next few emails will be presented without commentary, so that you can experi
 
 I didn't expect a reply after sending my last email. It felt obvious that this was an exercise in futility. However, my bottom-of-the-barrel expectations were slightly moved when I received a response one day later.
 
-It was now Elise, making a half-hearted apology for "any inconvenience" and asking me to reply to the ticket, as my last message apparently generated a new ticket. I do the needful and wait for a response. Shortly after, Elise transfers it to Violet.
+It was now Elise, making a half-hearted apology for "any inconvenience" and asking me to reply to the ticket, as my last message apparently generated a new one. I do the needful and wait for a response. Shortly after, Elise transfers it to Violet.
 
 Violet, bless her heart, actually read the ticket and didn't send me the same template that others did. The email asked for the same information that I've submitted before for a manual authentication, which is fine. It's a different ticket, and security requirements can be like that sometimes.
 
@@ -221,7 +219,7 @@ Violet... Violet sends me this:
 > Regards,
 > Violet
 
-I try my best to hold back any anger that I might've held at that time, bite my tongue and let her know that I'm using a password manager.
+I try my best to hold back any anger that I might've held at that time and let her know that I'm using a password manager.
 
 I'm asked to use an incognito browser, but still, no dice.
 
@@ -456,7 +454,7 @@ I point this out to Nina:
 > > 
 > > However, we have tried to reset your password to gain access and this does not seem to be the case. 
 > 
-> Are you sure about that? Go to haveibeenpwned.com, enter my email address (...@live.com) and you’ll see that it was in a mid-2012 Dropbox password leak (relevant news article: https://www.vice.com/en/article/78kevq/dropbox-forces-password-resets-after-user-credentials-exposed). Dropbox reset my password in August 2016 as it was a part of this leak.
+> Are you sure about that? Go to haveibeenpwned.com, enter my email address (...@live.com) and you’ll see that it was in a mid-2012 Dropbox password leak (relevant news article: <https://www.vice.com/en/article/78kevq/dropbox-forces-password-resets-after-user-credentials-exposed>). Dropbox reset my password in August 2016 as it was a part of this leak.
 > 
 > Therefore,
 > 
@@ -522,14 +520,14 @@ Nina comes back and asks me to click the "I can't recover my account using this 
 
 I send a screenshot of the knowledge base article in a reply. I expect nothing. I ask myself – why am I even doing this anyway?
 
-Perhaps there's some deeper meaning to me weaving through the 7 layers of customer support hell, finding solutions to being stonewalled, and perseverance. I'm too tired to look for it though. I just wanted to re-experience my bootleg Minecraft worlds one final time.
+Perhaps there's some deeper meaning to me weaving through the 7 layers of customer support hell, finding solutions to being stonewalled, and perseverance. I'm too tired to look for it though. I just wanted to re-experience my worlds one final time.
 
 ## Part 5 - The End
 
 (updated on 03/12/2021)
 
-After posting this article to the forum thread mentioned above (and my comment subsequently being deleted, thanks mods!), my ticket finally got escalated to someone who is an "account security manager" at Dropbox, and after verifying my identity, they helped me with resetting the password. It's unfortunate that this is what I had to do through to get actual help, but it's something, I guess.
+After posting this article to the forum thread mentioned above (and my comment subsequently being deleted, thanks mods!), my ticket finally got escalated to someone who is an "account security manager" at Dropbox, and after verifying my identity, they helped me with resetting the password. It's unfortunate that I had to publish this entire article in order to be noticed by Dropbox and receive actual help, but it's something, I guess.
+
+For any companies that may be reading this, I hope this story highlights the importance of having a high-quality support department that understands the issues that your clients are having, and that are familiar with how the product operates. It's not the day-to-day usage of your product, but the handling of edge cases and unexpected situations that truly separates reliable and trusted solutions from others.
 
 The point I've made before still stands though, and it's that **you should stop using Dropbox.** They don't care about you or your files, all they want is your money. Move to any other service like Google Drive, or a self-hosted solution like Nextcloud. There are many alternatives to Dropbox, and they're all better at preserving your files than Dropbox.
-
-All I hope is that this article will convince at least one person to look at other options before putting anything important into Dropbox. That is all.
