@@ -33,7 +33,7 @@ Depending on which software you chose, you can follow the instructions in their 
 
 To learn more and set up CF Tunnels, see this page: <https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/>
 
-You can use a remotely managed tunnel to configure everything through Cloudflare Dashboard, only requiring you to install `cloudflared` on the server and link it to your Cloudflare account. It's also worth mentioning that both Mastodon and Pleroma don't expect you to use tunnels, and as such require HTTPS for communication. You can generate a self-signed HTTPS certificate using these commands:
+You can use a remotely managed tunnel to configure everything through Cloudflare Dashboard, only requiring you to install `cloudflared` on the server and link it to your Cloudflare account. You'll also need to generate and set up a self-signed HTTPS certificate during the setup of Pleroma or Mastodon, which can be done using these commands:
 
 ```sh
 sudo -i
@@ -44,7 +44,7 @@ openssl req -new -key server.key -out server.csr
 openssl x509 -req -days 99999 -in server.csr -signkey server.key -out server.crt
 ```
 
-Afterwards, set the endpoint in your tunnel configuration to something like `https://localhost:443` and enable "No TLS Verify" to accept the self-signed certificate. You can use a real certificate from LetsEncrypt, but using it will be complicated and it is unnecessary for local traffic, since Cloudflare generates a valid certificate for your publicly accessible address automatically.
+Afterwards, set the endpoint in your tunnel configuration to something like `https://localhost:443` and enable "No TLS Verify" to accept the self-signed certificate. Using services like LetsEncrypt in this case is unnecessary, since Cloudflare generates a certificate for your domain automatically.
 
 ## Securing outgoing connections
 
