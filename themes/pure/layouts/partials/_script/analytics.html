@@ -1,4 +1,4 @@
 <!-- Analytics -->
-{{- if and (not .Site.IsServer) .Site.GoogleAnalytics -}}
+{{- if and (not hugo.IsServer) .Site.GoogleAnalytics -}}
   {{ template "_internal/google_analytics.html" . }}
 {{- end -}}
