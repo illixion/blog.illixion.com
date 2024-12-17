@@ -12,7 +12,7 @@ categories:
 - tutorials
 ---
 
-> Please note that this article uses an old version of colima due to a major networking refactor done in 0.6.0, so you may be missing important updates. The article will be updated as soon as a new way to define bridged networks has been found.
+> Please note that this article uses an old version of colima due to a major networking refactor done in 0.6.0, so you may be missing important updates.
 
 ## Preface
 
@@ -33,7 +33,12 @@ The first step is to install Colima and Docker on your macOS machine. You can do
 Once you have Homebrew installed, you can run the following commands in your terminal:
 
 ```bash
+# Apple Silicon
 wget -O /usr/local/bin/colima https://github.com/abiosoft/colima/releases/download/v0.5.6/colima-Darwin-arm64
+# Intel Mac
+wget -O /usr/local/bin/colima https://github.com/abiosoft/colima/releases/download/v0.5.6/colima-Darwin-x86_64
+
+# Afterwards, run these commands:
 chmod +x /usr/local/bin/colima
 brew install docker docker-compose
 ```
@@ -170,7 +175,7 @@ docker-compose up -d
 
 ### Step 6: Set up Home Assistant
 
-Now that we have Home Assistant installed on Docker, we can access its web interface and set it up. To find out the IP address of the Home Assistant container, run `colima list` and look for the ADDRESS column. To open Home Assistant, open your browser and go to http://IPADDRESS:8123, making sure to replace IPADDRESS with the correct address. You should see something like this:
+Now that we have Home Assistant installed on Docker, we can access its web interface and set it up. Due to using bridged networking you won't be able to see the IP address in `colima list`, however Home Assistant supports Bonjour so you should be able to access via this URL: <http://homeassistant.local:8123>. If this doesn't work, you can also try logging into your router to check the DHCP lease list, and access home assistant via its IP directly. You should see something like this:
 
 ![Home Assistant setup page](/post_files/colima-home-assistant/hassio_welcome.png)
 
@@ -181,6 +186,21 @@ Note that discovery will still not work at this stage, you will first need to en
 ![Home Assistant network settings](/post_files/colima-home-assistant/hassio_network.png)
 
 Save your changes and restart Home Assistant. You should see a notification about discovered devices if you have any on your network.
+
+### (optional) Step 7: Configure a serial USB Zigbee/Z-Wave/etc dongle
+
+If you have accessories that require a USB dongle to be accessed via Home Assistant, and the dongle uses serial communication (CC2531 or SkyConnect for example), you can use ser2net to pass it through to Colima. Use [this guide](https://www.zigbee2mqtt.io/advanced/remote-adapter/connect_to_a_remote_adapter.html) and this ser2net configuration:
+
+```
+connection: &con01
+    accepter: tcp,20108
+    enable: on
+    options:
+        kickolduser: true
+    connector: serialdev(nouucplock),/dev/tty.usbmodem1201,115200n81,local
+```
+
+Please note that the `/dev/tty.usbmodem1201` part is unfortunately dynamic and changes with every reboot, so you'll likely need to ensure that it's kept up-to-date, followed by `brew services restart ser2net`.
 
 <hr>
 
