@@ -1,6 +1,6 @@
 ---
 author: Ixion
-title: Home Assistant on M1 Macs, the proper way
+title: Home Assistant on M1 Macs using Colima
 date: "2023-04-04"
 summary: How to set up Home Assistant on M1 Macs using Colima and Docker containers, without breaking discovery
 copyright_notice: Parts of this article were written by AI
