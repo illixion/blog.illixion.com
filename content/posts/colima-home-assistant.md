@@ -4,17 +4,23 @@ title: Home Assistant on M1 Macs using Colima
 date: "2023-04-04"
 summary: How to set up Home Assistant on M1 Macs using Colima and Docker containers, without breaking discovery
 copyright_notice: Parts of this article were written by AI
-tags: 
-- docker
-- macos
-- m1
+tags:
+  - docker
+  - macos
+  - homeassistant
 categories:
-- tutorials
+  - tutorials
 ---
 
-> Please note that this article uses an old version of colima due to a major networking refactor done in 0.6.0, so you may be missing important updates.
+## 2025 update
 
-## Preface
+There is now an even easier method of installing Home Assistant OS on Apple Silicon Macs, which is to use VMware Fusion (free as of 2024) to virtualize it instead of Docker. This new method is a lot easier and offers USB passthrough which is often desired for Zigbee/Z-Wave dongles. You can find the article here: [How to run Home Assistant on Apple Silicon using VMware Fusion](/2025/01/home-assistant-on-apple-silicon/)
+
+If you'd like to use Colima and Docker instead, the original article is below.
+
+## Home Assistant in Docker
+
+> Please note that this article uses an old version of colima due to a major networking refactor done in 0.6.0, so you may be missing important updates.
 
 Home Assistant is a popular open-source platform for home automation that allows you to control and monitor your smart devices from a single interface. It can run on various platforms, including macOS, but it requires a container runtime such as Docker to work properly.
 
