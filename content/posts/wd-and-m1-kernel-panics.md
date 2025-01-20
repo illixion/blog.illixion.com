@@ -5,7 +5,6 @@ date: "2020-09-03"
 summary: I've been experiencing a strange kernel panic related to the SoC watchdog on my M1 Mac for many months, and I believe I might've found a fix.
 tags: 
 - macos
-- m1
 categories:
 - tipsandtricks
 ---
