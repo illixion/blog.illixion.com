@@ -9,7 +9,9 @@
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">{{- $profile.author }}</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">{{- $profile.author_title }}</h3>
+          {{- if $profile.location}}
           <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> {{- $profile.location }}</small>
+          {{- end }}
         </div>
         {{- end }}
         {{- partial "search.html" . }}
