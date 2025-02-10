@@ -11,7 +11,7 @@ categories:
 - tutorials
 ---
 
-In 2023, I wrote an article on how to run Home Assistant OS in a Docker environment, which was the only semi-official way to run a supported version of Home Assistant, but it came with various downsides like lack of USB passthrough and generally not being accessible to non-developers. Hence, I'm writing this article with a method I'm currently using, which is VMware Fusion running the official ARM disk image that I recently found out Home Assistant provides now. For what it's worth, I also tried suggesting this article as official instructions to be on Home Assistant's macOS website, but the change [wasn't accepted](https://github.com/home-assistant/home-assistant.io/pull/36993).
+In 2023, I published an article detailing how to run Home Assistant OS in a Docker environment. This was the sole semi-official method for running a supported version of Home Assistant on macOS, but it had several drawbacks, including the absence of USB passthrough and limited accessibility to non-developers. Therefore, I'm sharing a method I'm currently employing, which involves using VMware Fusion to run the official ARM disk image that Home Assistant recently made available. For reference, I also suggested incorporating this article as the official instructions on Home Assistant's macOS website, but unfortunately, the proposed change was not accepted (https://github.com/home-assistant/home-assistant.io/pull/36993).
 
 To get started, download VMware Fusion by following this URL: https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Fusion
 
