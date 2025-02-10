@@ -14,7 +14,7 @@ categories:
 
 ## 2025 update
 
-There’s now an even simpler way to install Home Assistant OS on Apple Silicon Macs: use VMware Fusion (free as of 2024) instead of Docker. This new method is much easier and offers USB passthrough, which is often desired for Zigbee/Z-Wave dongles. You can find the article here: [How to run Home Assistant on Apple Silicon using VMware Fusion](/2025/01/home-assistant-on-apple-silicon/)
+There’s now an even simpler way to install Home Assistant OS on Apple Silicon Macs: use VMware Fusion (free as of 2024) instead of Docker. This new method is easier to set up and offers USB passthrough, which is often desired for Zigbee/Z-Wave dongles. You can find the article here: [How to run Home Assistant on Apple Silicon using VMware Fusion](/2025/01/home-assistant-on-apple-silicon/)
 
 If you prefer Colima and Docker, the original article is below.
 
