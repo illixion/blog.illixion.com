@@ -11,6 +11,8 @@ categories:
 - tutorials
 ---
 
+> Visit [cani.rootmy.tv](https://cani.rootmy.tv) for an up-to-date list of available root methods, as there are newer methods available that work on more recent webOS versions than my script.
+
 Rooting your LG webOS TV can unlock a host of new features and capabilities, allowing you to customize your viewing experience to a greater extent. This guide is designed for technically inclined owners of LG webOS TVs who wish to root their devices using a Python script. Before proceeding, please ensure that you understand the risks involved with rooting, which may include voiding your warranty.
 
 ## Prerequisites
