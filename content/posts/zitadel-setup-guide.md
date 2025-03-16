@@ -165,6 +165,7 @@ After=network.target
 User=zitadel
 ExecStart=/usr/local/bin/zitadel start-from-init --tlsMode enabled --config /home/zitadel/config.yml --masterkeyFile /home/zitadel/zitadel-masterkey
 Restart=always
+Environment=ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME="root" ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD="RootPassword1!"
 
 [Install]
 WantedBy=multi-user.target
@@ -197,6 +198,13 @@ At this point, ZITADEL is running on your server, but it is not accessible from 
 If you don't want to use Cloudflare Tunnels, you can set up a reverse proxy using Nginx or Caddy and point it to `https://localhost:8443`.
 
 ## Step 9: Integrate ZITADEL with Tailscale
+
+To get started, log into ZITADEL using the default credentials and change the password when prompted. The default credentials are:
+
+- **Username:** `root@zitadel.localhost`
+- **Password:** `RootPassword1!`
+
+After logging in, you should see the ZITADEL dashboard. Now, you can integrate ZITADEL with Tailscale for user authentication.
 
 1. In the ZITADEL admin panel, create a new project:
 
