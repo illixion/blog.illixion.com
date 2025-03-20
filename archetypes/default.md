@@ -1,5 +1,5 @@
 ---
-author: "{{ .Site.Author.name }}"
+author: "{{ .Site.Params.Author.name }}"
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 summary: 
