@@ -5,10 +5,8 @@ defaultContentLanguage: en
 canonifyURLs: false
 footnoteReturnLinkContents: ↩
 hasCJKLanguage: true
-paginate: 7
 enableEmoji: false
 PygmentsCodeFences: false
-googleAnalytics: "G-QQVZF8B7BH"
 permalinks:
   posts: /:year/:month/:filename/
 markup:
@@ -16,6 +14,12 @@ markup:
     renderer:
       unsafe: true
 
+pagination:
+  pagerSize: 7
+
+services:
+  googleAnalytics:
+    id: "G-QQVZF8B7BH"
 
 taxonomies:
     category : categories
