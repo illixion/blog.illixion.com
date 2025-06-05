@@ -141,7 +141,7 @@ params:
       url: favicon.ico
     title: "Ixion's blog"
     favicon: favicon.ico
-    board: "" # 公告牌
+    board: "Support independent bloggers! You can donate any amount here, and every little bit helps: <a href='https://github.com/sponsors/illixion?o=blog'>Donate via GitHub</a>." # 公告牌
   # Edit button
   github_repo: "https://github.com/illixion/blog.illixion.com"
 
@@ -221,7 +221,7 @@ params:
 
   # Sidebar only the following widgets. you can remove any you don't like it.
   widgets:
-    # - board
+    - board
     - category
     - tag
     - recent_posts
