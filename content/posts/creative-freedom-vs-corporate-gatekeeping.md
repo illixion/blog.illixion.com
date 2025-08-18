@@ -34,7 +34,7 @@ This trend closely mirrors lobbying efforts from lesser-known organizations like
 
 Collective Shout has previously expressed opposition to titles such as *Detroit: Become Human* because it explored topics the group deemed too inappropriate, as well as GTA V back in 2014 due to the game's sandbox nature. Titles like Saints Row or Duke Nukem may also be at risk, according to one retro game seller's [statement to GamingOnLinux.com](https://www.gamingonlinux.com/2025/08/zoom-platform-also-had-payment-processor-issues-say-they-have-no-plans-to-remove-any-titles/).
 
-I'd like to highlight this quote from Naomi Clark's [statement to 404 Media](https://www.404media.co/credit-card-companies-are-hurting-the-future-of-video-games/), a game designer and chair of NYU Game Center, where many students share their first games on [Itch.io](https://Itch.io):
+I'd like to highlight this quote from Naomi Clark's [interview with 404 Media](https://www.404media.co/credit-card-companies-are-hurting-the-future-of-video-games/), a game designer and chair of NYU Game Center, where many students share their first games on [Itch.io](https://Itch.io):
 
 > We're really hamstringing the future of arts and communication and creating meaningful culture if we adhere to the kind of position that says you can't make games about serious things.
 
