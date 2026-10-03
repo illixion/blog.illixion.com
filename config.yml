@@ -75,7 +75,7 @@ menu:
     - identifier: pgp
       name: PGP
       title: PGP
-      url: /pgp/
+      url: https://illixion.com/#keys
       weight: 60
 
     - identifier: about
