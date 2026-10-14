@@ -85,6 +85,11 @@ menu:
       weight: 70
 
 params:
+  # Self-hosted Umami on servo (see layouts/partials/_script/analytics.html).
+  umami:
+    src: https://stats.illixion.com/t.js
+    websiteId: 0a92f197-0ef4-46e1-9dcc-2d93762666af
+    domains: blog.illixion.com
   since: "2020"
   dateFormatToUse: "2006-01-02"
   enablePostCopyright: true

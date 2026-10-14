@@ -1,0 +1,10 @@
+<!-- Analytics. Overrides the theme's partial to add self-hosted Umami next to GA
+     while the two run in parallel; drop the GA block once Umami is trusted. -->
+{{- if not hugo.IsServer -}}
+  {{- with site.Params.umami }}
+<script defer src="{{ .src }}" data-website-id="{{ .websiteId }}" data-domains="{{ .domains }}"></script>
+  {{- end }}
+  {{- if site.Config.Services.GoogleAnalytics.ID }}
+  {{ template "_internal/google_analytics.html" . }}
+  {{- end }}
+{{- end -}}
