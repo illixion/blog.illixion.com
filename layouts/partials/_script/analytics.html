@@ -3,6 +3,7 @@
 {{- if not hugo.IsServer -}}
   {{- with site.Params.umami }}
 <script defer src="{{ .src }}" data-website-id="{{ .websiteId }}" data-domains="{{ .domains }}"></script>
+<script defer src="{{ "engaged.js" | relURL }}"></script>
   {{- end }}
   {{- if site.Config.Services.GoogleAnalytics.ID }}
   {{ template "_internal/google_analytics.html" . }}
