@@ -19,7 +19,8 @@ categories:
 > runs on the device itself: Apple Vision Pro, iPhone, iPad and Apple TV. It signs with a free
 > Apple ID, refreshes apps on its own, and launches emulators with JIT, which works on
 > visionOS 27 again. If you came here because of error -80045, skip to
-> [where the fixes stand](#where-the-fixes-stand).
+> [where the fixes stand](#where-the-fixes-stand). For -80046, see
+> [the follow-up](/2026/10/sideloading-error-80046/).
 
 | ![GTA San Andreas running in ARMSX2 on Apple Vision Pro](/post_files/building-apparition/gta-sa-vision-pro.png) |
 |:--:|
@@ -332,6 +333,10 @@ installs with Apparition from [apps.illixion.com](https://apps.illixion.com).
 
 ### Where the fixes stand
 
+> **Update, 24 October:** since 22 October there's a second break, -80046 when asking for the
+> Xcode token, and it needs one more header change. Where each tool stands and the fix are in
+> [Sideloading error -80046](/2026/10/sideloading-error-80046/).
+
 As of 14 October:
 
 - **iloader 2.3.7** and **xtool 1.22.2** are fixed.
@@ -355,6 +360,8 @@ work: Apple refuses the SMS requests for these sign-ins.
    no `au`, Apple has already sent it: ask the user for it and check it with `validateCode` (the
    `security-code` header), without requesting another push. That's how isideload and SideSign
    handle it. Apparition does it later, when the Xcode token request returns -22411.
+3. **Since 22 October:** claim a Mac on the Xcode token request and the developer requests after
+   it, or Apple answers -80046. See [the -80046 post](/2026/10/sideloading-error-80046/#fixing-a-tool-that-signs-in).
 
 Apparition's version is in
 [`claimed_platform.rs`](https://github.com/illixion/Apparition/blob/main/core/src/claimed_platform.rs).

@@ -1,0 +1,138 @@
+---
+author: Ixion
+title: "iOS sideloading error -80046, and how I solved it in Apparition"
+date: "2026-10-24"
+summary: Since 22 October, free-account sideloading tools fail with -80046 right after the password. Apple stopped issuing the developer token to sign-ins that claim to come from an Android phone. Most tools moved to a third-party Mac anisette server; claiming a Mac on that one token request works too.
+copyright_notice: Parts of this article were written by AI
+tags:
+- ios
+- visionos
+- sideloading
+categories:
+- general
+---
+
+> **TL;DR:** Since about 22 October, sideloaders that sign in with a free Apple ID fail with
+> -80046 ("This action cannot be completed at this time") right after the password or the
+> two-factor code. Apple no longer gives out the token for its developer services when the
+> request says it comes from an Android phone, which is what these tools have claimed since
+> the [-80045 fix](/2026/10/building-apparition/#fixing-a-tool-that-signs-in).
+>
+> - **If you use a sideloader:** update it. Here's [where each tool stands](#where-the-tools-stand).
+> - **If you write one:** keep claiming Android for the sign-in, and claim a Mac on the Xcode
+>   token request and the developer requests after it. [Details below](#fixing-a-tool-that-signs-in);
+>   no Mac anisette server needed.
+
+## What the error looks like
+
+> Auth error -80046: This action cannot be completed at this time.
+
+It shows up right after Apple has accepted your password. In my case there was no two-factor
+step, which is common for these sign-ins, so it came straight after the password. Others got a
+code on their phone, typed it in, and then got -80046. Either way it's the step where the tool asks for
+the token Apple's developer services need (`com.apple.gs.xcode.auth`), the one that lets it
+make certificates and profiles.
+
+It started for everyone on 22 October:
+[SideStore](https://github.com/SideStore/SideStore/issues/1686),
+[AltStore](https://github.com/altstoreio/AltStore/issues/1840),
+[xtool](https://github.com/xtool-org/xtool/issues/378) and
+[iPASide](https://github.com/pwnapplehat/iPASide/issues/9) all got it at this step. iPASide's
+trace shows it clearly: `init` and `complete` succeed, `apptokens` returns `ec=-80046`.
+
+## Why tools claim to be an Android phone
+
+Every Apple ID sign-in carries anisette data, headers that identify the machine to Apple. On a
+Mac, macOS makes them. Sideloaders that sign in from Windows, Linux or a server can't run
+Apple's Mac code, so for years they've used the copy of Apple's anisette code that ships in
+Apple Music for Android. That's what an "anisette server" usually runs.
+
+The sign-in also says which device it comes from, in a header called `X-Mme-Client-Info`.
+Tools used to claim a Mac there. Since 12 October, Apple refuses sign-ins whose claimed
+platform doesn't match the anisette (-80045), so the fix was to claim Android whenever the
+anisette comes from Android code. I wrote up how that was found in
+[the Apparition story](/2026/10/building-apparition/). Ten days later, -80046 is the next step
+refusing that same Android claim.
+
+## Where the tools stand
+
+As of 24 October:
+
+- **xtool 1.23.0**, **iloader 2.4.0** and **atvloadly 0.7.4** work again. All three switched
+  to jkcoxson's server `mac-ani.jkcoxson.com`, which emulates a Mac's anisette instead of
+  Android's (atvloadly through bitxeno's PlumeImpactor fork).
+- **SideStore** has no release with a fix. Users report getting in by picking jkcoxson's server
+  in its anisette settings, often only after several tries.
+- **AltStore** has no fix yet.
+- **Apparition** uses the fix below, without a third-party server. It's in the release after 0.2.0.
+
+If your tool isn't fixed yet, update when it is, rather than retrying your real account over and
+over, which risks a temporary lock.
+
+The Mac server works, but it means three tools' sign-ins now all depend on one person's
+server, and I couldn't find its source.
+
+## Finding what Apple actually checks
+
+My first thought was the same mistake as with -80045: Apple must have banned the Android
+anisette code. If so, the only way out would be a Mac's own anisette, and that's no general
+fix. On macOS 27, programs that aren't Apple's get nothing from the anisette daemon, and
+`CoreADI.framework` now contains only the daemon, so there's no library left to load. My old
+Intel MacBook Pro on macOS 15 can still serve it, but that's no help to someone with an iPhone
+and a Windows PC.
+
+But the sign-in itself worked: Apple accepted the Android anisette and the password, and only
+refused the token afterwards. With a valid session, I could ask for the token in as many ways
+as I liked without signing in again each time. So I wrote a
+[small probe](https://github.com/illixion/Apparition/blob/main/core/examples/apptoken_probe.rs).
+It signs in once with Android anisette, claiming Android, then sends the token request in
+several variants and prints Apple's answer to each:
+
+| Token request (Android anisette, sign-in claimed Android) | Result |
+|---|---|
+| As before, claiming Android | -80046 |
+| Without the `X-Xcode-Version` and `X-Apple-App-Info` headers | -80046 |
+| Claiming Android, but naming Xcode as the program | -80046 |
+| `svct` set to Xcode instead of iCloud | -80046 |
+| Claiming a Mac (`<Mac15,7> <macOS;27.0;…> <com.apple.AuthKit/1 (com.apple.akd/1.0)>`) | **token** |
+| An iCloud token instead, claiming Android | token |
+
+That's the whole story: one header on one request. The anisette is still Android's, and the
+session is still the one that signed in as Android. If the token request says it comes from a
+Mac, Apple issues the token.
+
+My guess at the reasoning, and it's only a guess: the anisette check runs at sign-in, and that's
+where -80045 comes from. The new check is a policy check on the token itself. An Xcode token for
+a device that says it's an Android phone makes no sense, because Android can't run Xcode, so
+Apple stopped issuing one, without checking the claim against the anisette. The iCloud token
+still being fine for Android fits that.
+
+With the change in place, the full sign-in went through with Android anisette on macOS 27: a
+normal two-factor prompt, then the developer services listing my certificates. It also worked
+from an Apple TV, signing in through a Mac's Apparition companion and installing an app. No
+third-party server was involved.
+
+## Fixing a tool that signs in
+
+1. Keep claiming Android in `X-Mme-Client-Info` for the sign-in itself when the anisette comes
+   from the Android code, and handle the code Apple pushes to the user's devices, as in
+   [the -80045 fix](/2026/10/building-apparition/#fixing-a-tool-that-signs-in).
+2. Once the password is accepted, send the `apptokens` request for `com.apple.gs.xcode.auth`
+   with a Mac's client info and User-Agent, for example
+   `<Mac15,7> <macOS;27.0;26A5378j> <com.apple.AuthKit/1 (com.apple.akd/1.0)>` and
+   `akd/1.0 CFNetwork/808.1.4`.
+3. Keep claiming a Mac for the developer services requests made with that token. That's what I
+   tested; I didn't try those claiming Android. Apple seems to tie the token to the client info
+   it was issued for: PlumeImpactor's maintainers found that switching identities breaks
+   refreshes with "session has expired".
+4. Fetch GrandSlam's URL bag with the sign-in's own claim. isideload 0.5.0 always fetches it
+   claiming a Mac, and with an Android sign-in GrandSlam then answers the first password request
+   with HTTP 503. Apart from that, GrandSlam sometimes answers 503 to a request it accepted
+   moments earlier, so expect the odd one.
+
+Apparition's version is in
+[`claimed_platform.rs`](https://github.com/illixion/Apparition/blob/main/core/src/claimed_platform.rs)
+(`Claim::after_sign_in`), plus a small hook in its vendored isideload (`GrandSlam::claiming`).
+
+This is tested on one account so far. If it fails for yours, the probe shows what Apple answers
+to each variant in a single sign-in, so you don't have to guess.
