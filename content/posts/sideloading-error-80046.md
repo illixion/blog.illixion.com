@@ -64,7 +64,7 @@ As of 24 October:
 - **SideStore** has no release with a fix. Users report getting in by picking jkcoxson's server
   in its anisette settings, often only after several tries.
 - **AltStore** has no fix yet.
-- **Apparition** uses the fix below, without a third-party server. It's in the release after 0.2.0.
+- **Apparition** uses the fix below, without a third-party server. It's in [0.3.0](https://github.com/illixion/Apparition/releases/tag/v0.3.0).
 
 If your tool isn't fixed yet, update when it is, rather than retrying your real account over and
 over, which risks a temporary lock.
