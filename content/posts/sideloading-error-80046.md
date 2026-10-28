@@ -18,10 +18,40 @@ categories:
 > request says it comes from an Android phone, which is what these tools have claimed since
 > the [-80045 fix](/2026/10/building-apparition/#fixing-a-tool-that-signs-in).
 >
-> - **If you use a sideloader:** update it. Here's [where each tool stands](#where-the-tools-stand).
+> - **If you use a sideloader:** the quickest way out is [Apparition](https://apparition.illixion.com),
+>   my free, open-source sideloader for Vision Pro, iPhone, iPad and Apple TV. It has had the fix
+>   since 0.3.0, and the [latest release](https://github.com/illixion/Apparition/releases/latest),
+>   0.3.5 as of 28 October, is the one to get. Or update the tool you have: here's
+>   [where each tool stands](#where-the-tools-stand).
 > - **If you write one:** keep claiming Android for the sign-in, and claim a Mac on the Xcode
 >   token request and the developer requests after it. [Details below](#fixing-a-tool-that-signs-in);
 >   no Mac anisette server needed.
+
+## The quick fix: Apparition
+
+<p align="center"><img src="/post_files/building-apparition/apparition-icon.png" width="128" alt="Apparition's icon, a ghost holding an app tile"></p>
+
+[Apparition](https://apparition.illixion.com) signs in with a free Apple ID and doesn't run into
+-80046, and it doesn't rely on anyone's anisette server. It's a sideloader that runs on the
+device itself, so after the first install you can refresh your apps and launch them with JIT
+without a computer in the loop:
+
+- **Runs on Apple Vision Pro, iPhone, iPad and Apple TV**, with desktop apps for macOS, Windows
+  and Linux for the first install.
+- **Installs from AltStore and SideStore sources**, from a GitHub project's releases, or from an
+  IPA or `.deb` you already have.
+- **Refreshes apps on its own** before the 7 days of a free account run out.
+- **Launches emulators with JIT**, which works on visionOS 27 and current iPhone chips again.
+  The older debugger trick no longer does.
+
+To get it, download **[the latest release](https://github.com/illixion/Apparition/releases/latest)**
+(0.3.5 as of 28 October) or the desktop app from [apparition.illixion.com](https://apparition.illixion.com), and follow
+the [setup steps](/2026/10/building-apparition/#apparition-if-you-want-to-try-it). If you
+installed an earlier build, update it: 0.3.0 is the first with the -80046 fix, and the
+releases since fix a good deal else (0.3.1 makes the Enable JIT prompt on Vision Pro appear in
+front of you, 0.3.2 installs `.deb` apps such as Kodi, and 0.3.5 adds a Stop button and lets
+iPhone and iPad use LocalDevVPN without a computer). The rest of this article explains what
+went wrong, and what the other tools did about it.
 
 ## What the error looks like
 
@@ -56,27 +86,42 @@ refusing that same Android claim.
 
 ## Where the tools stand
 
-As of 24 October:
+As of 28 October:
 
-- **xtool 1.23.0**, **iloader 2.4.0** and **atvloadly 0.7.4** work again. All three switched
-  to jkcoxson's server `mac-ani.jkcoxson.com`, which emulates a Mac's anisette instead of
-  Android's (atvloadly through bitxeno's PlumeImpactor fork).
-- **SideStore** has no release with a fix. Users report getting in by picking jkcoxson's server
-  in its anisette settings, often only after several tries.
-- **AltStore** has no fix yet.
-- **Apparition** uses the fix below, without a third-party server. It's in [0.3.0](https://github.com/illixion/Apparition/releases/tag/v0.3.0).
+- **Apparition** uses the fix below, without a third-party server. The fix is in
+  [0.3.0](https://github.com/illixion/Apparition/releases/tag/v0.3.0) and later; get the
+  [latest release](https://github.com/illixion/Apparition/releases/latest), currently 0.3.5.
+- **xtool**, **iloader**, **atvloadly** and **iPASide** work again, from xtool 1.23.0, iloader
+  2.4.0, atvloadly 0.7.4 and iPASide 1.2.9. They switched to a Mac's anisette, mostly from
+  jkcoxson's server `mac-ani.jkcoxson.com`, instead of Android's (atvloadly through bitxeno's
+  PlumeImpactor fork). Since then:
+  - xtool 1.24.0 fixes another source of HTTP 503 errors at sign-in.
+  - iloader 2.4.1, released on 28 October, overrides the client info to fix 403 errors on SMS two-factor
+    codes, and adds its own anisette server, `ani.iloader.app`.
+  - atvloadly 0.8.0 and later always use a remote anisette server, and warn that sign-in can
+    fail while that server is unstable. The latest is 0.8.1.
+  - iPASide tries three servers in turn, so one being down doesn't stop sign-in. The latest is
+    1.2.13.
+- **SideStore** has no release with a fix; its latest is still the September 0.7.0-alpha, and
+  two pull requests aimed at sign-in errors are open and unmerged. Users report getting in by
+  picking jkcoxson's server in its anisette settings, often only after several tries.
+- **AltStore** has no fix yet, and its latest release is still September's 2.3. Pull requests
+  that send the anisette server's user agent, or sign in with Windows anisette data, are open.
 
-If your tool isn't fixed yet, update when it is, rather than retrying your real account over and
-over, which risks a temporary lock.
+If your tool isn't fixed yet, switch to one that is, or update when it is, rather than retrying
+your real account over and over, which risks a temporary lock.
 
-The Mac server works, but it means three tools' sign-ins now all depend on one person's
-server, and I couldn't find its source.
+The Mac server works, but it means most of these tools' sign-ins depend on one person's
+server, and I couldn't find its source. A few now try other servers as well, but that's still
+other people's servers handling your sign-in.
 
 ## Finding what Apple actually checks
 
 My first thought was the same mistake as with -80045: Apple must have banned the Android
-anisette code. If so, the only way out would be a Mac's own anisette, and that's no general
-fix. On macOS 27, programs that aren't Apple's get nothing from the anisette daemon, and
+anisette code. The other maintainers who fixed this reached the same conclusion first: xtool's
+fix says Apple "now blocks Android-identifying clients", and iPASide's says it refuses sign-in
+for anisette generated by Android's libraries. If that were the whole story, the only way out would be a Mac's own anisette, and that's
+no general fix. On macOS 27, programs that aren't Apple's get nothing from the anisette daemon, and
 `CoreADI.framework` now contains only the daemon, so there's no library left to load. My old
 Intel MacBook Pro on macOS 15 can still serve it, but that's no help to someone with an iPhone
 and a Windows PC.
