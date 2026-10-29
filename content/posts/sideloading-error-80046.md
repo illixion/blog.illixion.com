@@ -181,3 +181,41 @@ Apparition's version is in
 
 This is tested on one account so far. If it fails for yours, the probe shows what Apple answers
 to each variant in a single sign-in, so you don't have to guess.
+
+## Update, 29 October: HTTP 403 at sign-in
+
+A different failure turned up on a Linux machine, before the password was even checked:
+
+> Received error response from grandslam: HTTP status client error (403 Forbidden) for url
+> (https://gsd.apple.com/grandslam/GsService2)
+
+It isn't the 403 that iloader 2.4.1 fixed for SMS codes. This one came on the very first
+sign-in request, and it had nothing to do with the account: a made-up Apple ID got it too.
+So I took the setup apart one piece at a time, with that made-up account:
+
+- **Anisette:** an external server gave the same 403.
+- **The client:** a plain `curl` with the same headers and body got 403 from that machine, and
+  a normal answer from my Mac and from another Linux PC.
+- **The network:** all three share one public IP address, and the clock, time zone and locale
+  matched.
+
+What differed was DNS. That machine asked Cloudflare's 1.1.1.1, and the others asked the router.
+`gsd.apple.com` sits behind a CDN that hands out a different Apple server depending on who asks.
+1.1.1.1 always pointed to one server, which answers every sign-in request with a plain HTML
+`403 Forbidden` page before Apple reads it. Forcing `curl` onto that server's address made my
+Mac fail the same way, and forcing the broken machine onto the router's server fixed it.
+Pointing its DNS at the router fixed sign-in.
+
+Changing DNS isn't something people should have to do, so Apparition now handles it. It still
+uses the system's DNS first. When an Apple server answers with that HTML 403, Apparition avoids
+that server for an hour and retries on another, so it doesn't keep knocking on one that refuses.
+If the system's DNS knows no other server, Apparition looks one up over DNS-over-HTTPS, from
+Google's and Cloudflare's. The lookups take more than one source, because the CDN rotates its
+answers and Google sometimes returned the refusing server too. Only that address lookup goes
+elsewhere; the Apple ID request still goes straight to Apple. If three servers refuse, the error
+says Apple turned the network away and suggests another network or the router's DNS. The change
+is on `main` ([`edge.rs`](https://github.com/illixion/Apparition/blob/main/core/vendor/isideload/src/auth/edge.rs))
+and will be in the next release.
+
+If you write a sideloader and see this 403, check which server `gsd.apple.com` resolves to
+before blaming your client.

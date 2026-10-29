@@ -22,6 +22,15 @@ categories:
 > [where the fixes stand](#where-the-fixes-stand). For -80046, see
 > [the follow-up](/2026/10/sideloading-error-80046/).
 
+> **Update, 29 October:** Apple was still refusing some sign-ins with HTTP 403, for a different
+> reason: one of Apple's sign-in servers turned away requests from some networks. Apparition now
+> recognizes that server, avoids it for an hour, and retries through another Apple server. The
+> server a device reaches can depend on its DNS; if every available server refuses, Apparition
+> reports that and suggests trying another network or using the router's DNS. The Apple ID
+> request itself stays with Apple; only alternate server addresses are looked up over DNS-over-HTTPS.
+> The full account, with how it was found, is in
+> [the -80046 article's update](/2026/10/sideloading-error-80046/#update-29-october-http-403-at-sign-in).
+
 | ![GTA San Andreas running in ARMSX2 on Apple Vision Pro](/post_files/building-apparition/gta-sa-vision-pro.png) |
 |:--:|
 | *GTA San Andreas on Apple Vision Pro, in ARMSX2 with JIT (visionOS screenshots are blurry)* |
