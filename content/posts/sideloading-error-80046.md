@@ -27,6 +27,10 @@ categories:
 >   token request and the developer requests after it. [Details below](#fixing-a-tool-that-signs-in);
 >   no Mac anisette server needed.
 
+> **Update, 30 October:** the fix below is no longer enough on its own. Apple now refuses the
+> Android anisette outright, so a free-account sign-in needs a Mac's anisette: a third-party
+> server, or a macOS VM you host. [What changed, and Apparition's two ways around it](#update-30-october-sign-in-needs-a-macs-anisette).
+
 ## The quick fix: Apparition
 
 <p align="center"><img src="/post_files/building-apparition/apparition-icon.png" width="128" alt="Apparition's icon, a ghost holding an app tile"></p>
@@ -219,3 +223,50 @@ and will be in the next release.
 
 If you write a sideloader and see this 403, check which server `gsd.apple.com` resolves to
 before blaming your client.
+
+## Update, 30 October: sign-in needs a Mac's anisette
+
+Everything above assumed Apple still took Android anisette for the sign-in itself. By 29 October
+it doesn't. With a made-up account, no credentials involved:
+
+- `gsd.apple.com`, which handles provisioning and the trusted-device steps, answered 403 to every
+  request carrying Android anisette, from my home network and from a server in Frankfurt.
+- `gsa.apple.com` answered 503 to every one of six requests claiming Android, and about half the
+  time to a Mac claim with Android anisette. Claiming Windows got past the platform check but
+  returned 503 about half the time as well, and a real sign-in then hit a 403 on the trusted
+  phone numbers, the same one iloader saw.
+- A Mac's own anisette was fine, and so were the third-party servers that make Mac anisette.
+
+So the Android anisette the built-in provider makes can no longer sign in. That includes
+Apparition's, on iPhone, iPad, Apple TV, Vision Pro and Linux, and every tool built on Dadoum's
+anisette server. Claiming a Mac on the token request, as above, still matters once you're past
+the password, but you can't get that far on Android anisette any more.
+
+I tried the idea in iloader's client-info override, claiming `<Mac15,7> <macOS;27.0;…>` for the
+sign-in. With a server that makes Mac anisette it makes no difference: Apple accepts the sign-in
+with the server's own reported identity too, an old MacBook Pro on macOS 10.12, and with the
+override. With Android anisette the same claim gets -80045, because Apple reads which platform
+made the anisette from the data itself, not from the header. A different claim string can't turn
+one into the other.
+
+Two ways in, and Apparition 0.4.2 supports both:
+
+1. **A third-party anisette server.** It's the quick one: enter its URL. Servers that make Mac
+   anisette work today, but Apple has tightened what it accepts several times this month, so one
+   could stop with no warning, and it's still someone else's server handling your sign-in.
+   Apparition ships and endorses none.
+2. **A macOS VM you host yourself.** This is the reliable one, but it takes about 20 minutes.
+   A VM's sign-in is refused (`-3000076`) unless the request carries the host's attestation,
+   the `x-apple-baa-*` headers, and claims the VM's real identity (`<VirtualMac2,1>`), not a
+   fixed `Mac15,7`. Those headers only come out of a logged-in desktop session, so a daemon
+   running as root gets nothing. Apparition 0.4.2 forwards the attestation, and a
+   [guide](https://github.com/illixion/Apparition/blob/main/docs/ANISETTE_VM.md) with a one-line
+   setup script turns a UTM macOS VM into that server. Nothing leaves your network.
+
+0.4.2 also retries the intermittent GrandSlam 503s once, at the start of sign-in, at the
+password proof and on the Xcode token request, so one bad answer no longer fails a whole
+sign-in.
+
+I'm still looking for other ways to get anisette Apple accepts, in case the third-party servers
+stop working too. If you write a sideloader, the 29 October checks above are worth repeating
+against your own anisette before assuming the sign-in or the client is at fault.
