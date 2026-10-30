@@ -2,7 +2,7 @@
 author: Ixion
 title: "iOS sideloading error -80046, and how I solved it in Apparition"
 date: "2026-10-24"
-summary: Since 22 October, free-account sideloading tools fail with -80046 right after the password. Apple stopped issuing the developer token to sign-ins that claim to come from an Android phone. Most tools moved to a third-party Mac anisette server; claiming a Mac on that one token request works too.
+summary: Since 22 October, free-account sideloading tools fail with -80046 right after the password. Apple stopped issuing the developer token to sign-ins that claim to come from an Android phone. Claiming a Mac on that one token request works. On 29 October a separate 403 turned out to be a firewall rule on the Content-Type header, fixed by sending text/xml.
 copyright_notice: Parts of this article were written by AI
 tags:
 - ios
@@ -27,9 +27,10 @@ categories:
 >   token request and the developer requests after it. [Details below](#fixing-a-tool-that-signs-in);
 >   no Mac anisette server needed.
 
-> **Update, 30 October:** the fix below is no longer enough on its own. Apple now refuses the
-> Android anisette outright, so a free-account sign-in needs a Mac's anisette: a third-party
-> server, or a macOS VM you host. [What changed, and Apparition's two ways around it](#update-30-october-sign-in-needs-a-macs-anisette).
+> **Update, 30 October (evening):** Apple's refusal of Android anisette turned out not to be about
+> the anisette at all. A firewall rule rejected the `Content-Type` sideloaders send, and
+> changing that one header fixes it. [The full story](#update-30-october-it-was-the-content-type);
+> Apparition 0.4.3 has the fix.
 
 ## The quick fix: Apparition
 
@@ -188,6 +189,10 @@ to each variant in a single sign-in, so you don't have to guess.
 
 ## Update, 29 October: HTTP 403 at sign-in
 
+> *Partly superseded: the DNS explanation below was real that day, but the server was only the
+> first to carry a rule that reached all of them the next day. See the
+> [30 October update](#update-30-october-it-was-the-content-type).*
+
 A different failure turned up on a Linux machine, before the password was even checked:
 
 > Received error response from grandslam: HTTP status client error (403 Forbidden) for url
@@ -221,52 +226,51 @@ says Apple turned the network away and suggests another network or the router's 
 is on `main` ([`edge.rs`](https://github.com/illixion/Apparition/blob/main/core/vendor/isideload/src/auth/edge.rs))
 and will be in the next release.
 
-If you write a sideloader and see this 403, check which server `gsd.apple.com` resolves to
-before blaming your client.
+If you write a sideloader and see this 403, check the request's `Content-Type` first (see the
+30 October update), then which server `gsd.apple.com` resolves to.
 
-## Update, 30 October: sign-in needs a Mac's anisette
+## Update, 30 October: sign-in needs a Mac's anisette (wrong)
 
-Everything above assumed Apple still took Android anisette for the sign-in itself. By 29 October
-it doesn't. With a made-up account, no credentials involved:
+This section said Apple had started refusing Android anisette outright and that a Mac's anisette,
+from a third-party server or a macOS VM, was the only way in. That was my conclusion from the
+403s and 503s below, and it was wrong. I've left the evidence here and put the real cause after it.
 
-- `gsd.apple.com`, which handles provisioning and the trusted-device steps, answered 403 to every
-  request carrying Android anisette, from my home network and from a server in Frankfurt.
-- `gsa.apple.com` answered 503 to every one of six requests claiming Android, and about half the
-  time to a Mac claim with Android anisette. Claiming Windows got past the platform check but
-  returned 503 about half the time as well, and a real sign-in then hit a 403 on the trusted
-  phone numbers, the same one iloader saw.
-- A Mac's own anisette was fine, and so were the third-party servers that make Mac anisette.
+By 29 October `gsd.apple.com` answered 403 to every request carrying Android anisette, from my
+home network and from a server in Frankfurt, while `gsa.apple.com` answered 503 to every request
+claiming Android and about half the time to a Mac claim with Android anisette. A Mac's own
+anisette sailed through, which looked like the proof.
 
-So the Android anisette the built-in provider makes can no longer sign in. That includes
-Apparition's, on iPhone, iPad, Apple TV, Vision Pro and Linux, and every tool built on Dadoum's
-anisette server. Claiming a Mac on the token request, as above, still matters once you're past
-the password, but you can't get that far on Android anisette any more.
+## Update, 30 October: it was the Content-Type
 
-I tried the idea in iloader's client-info override, claiming `<Mac15,7> <macOS;27.0;…>` for the
-sign-in. With a server that makes Mac anisette it makes no difference: Apple accepts the sign-in
-with the server's own reported identity too, an old MacBook Pro on macOS 10.12, and with the
-override. With Android anisette the same claim gets -80045, because Apple reads which platform
-made the anisette from the data itself, not from the header. A different claim string can't turn
-one into the other.
+What I couldn't explain was that a cellular connection, a clean IP address I had never signed in
+from, got the same 403. So I stopped changing the anisette and started taking the request apart,
+header by header, against `startMachineProvisioning` on `gsd.apple.com` (a made-up account again;
+the first request of a sign-in carries no password). The 403 is a plain HTML page from Apple's
+edge, sent before Apple's own code reads the request, and it is keyed on one header:
+**`Content-Type`**.
 
-Two ways in, and Apparition 0.4.2 supports both:
+| Content-Type | `gsd.apple.com` (provisioning) | `gsa.apple.com` (sign-in) |
+|---|---|---|
+| `text/x-xml-plist` (what sideloaders send) | 403 | works |
+| `application/x-xml-plist` | works | 403 |
+| `text/xml` | works | works |
 
-1. **A third-party anisette server.** It's the quick one: enter its URL. Servers that make Mac
-   anisette work today, but Apple has tightened what it accepts several times this month, so one
-   could stop with no warning, and it's still someone else's server handling your sign-in.
-   Apparition ships and endorses none.
-2. **A macOS VM you host yourself.** This is the reliable one, but it takes about 20 minutes.
-   A VM's sign-in is refused (`-3000076`) unless the request carries the host's attestation,
-   the `x-apple-baa-*` headers, and claims the VM's real identity (`<VirtualMac2,1>`), not a
-   fixed `Mac15,7`. Those headers only come out of a logged-in desktop session, so a daemon
-   running as root gets nothing. Apparition 0.4.2 forwards the attestation, and a
-   [guide](https://github.com/illixion/Apparition/blob/main/docs/ANISETTE_VM.md) with a one-line
-   setup script turns a UTM macOS VM into that server. Nothing leaves your network.
+The two servers block opposite values, and provisioning is the first thing a sign-in does, which
+is why everything died there. The anisette, the serial, the client info, the User-Agent and the
+network never mattered. The same server address, 17.171.11.101, returns 403 to `text/x-xml-plist`
+and a normal answer to `text/xml`. That also settles the 29 October DNS story: the rule reached
+some servers first, so choosing another one dodged it for a day, and then it reached all of them.
 
-0.4.2 also retries the intermittent GrandSlam 503s once, at the start of sign-in, at the
-password proof and on the Xcode token request, so one bad answer no longer fails a whole
-sign-in.
+The body is XML either way and Apple parses it the same, so the fix is one line: send
+`Content-Type: text/xml`. With it, the throwaway account gets Apple's own "account information was
+entered incorrectly" answer instead of a 403, which means provisioning, the URL bag and the
+sign-in's first request all reach Apple and the Android anisette is accepted. Apparition 0.4.3
+sends it, signs in with its built-in anisette again, and no longer needs a Mac's anisette or a
+server. The third-party server and macOS VM routes from 0.4.2 still work if you prefer them.
 
-I'm still looking for other ways to get anisette Apple accepts, in case the third-party servers
-stop working too. If you write a sideloader, the 29 October checks above are worth repeating
-against your own anisette before assuming the sign-in or the client is at fault.
+I'd also added a hardware-identity field to the request on the theory that Apple wanted a serial,
+and the earlier retry-on-another-server logic stays as a general fallback. Neither was the cause.
+
+If you write a sideloader and it started getting 403 or 503 on 29 October, change your
+`Content-Type` to `text/xml` on every GrandSlam request before touching your anisette. Apple may
+move the rule again; the symptom to look for is a 403 with an HTML body and no Apple error code.
